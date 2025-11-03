@@ -1,0 +1,313 @@
+# Portfolio Website Concept - REVISED
+## Noah Darwich - Research Data Scientist
+
+---
+
+## Executive Summary
+
+**Core Value Proposition:** "Research Data Scientist Specializing in Protest Event Data and Arabic NLP"
+
+**Target Audience:**
+- Academic research institutions seeking data science collaborators
+- Policy research organizations (think tanks, foundations)
+- Universities hiring research data scientists
+- Research teams needing event dataset expertise
+
+**Key Differentiator:** 6+ years experience developing protest event datasets across multiple MENA countries, with proven collaborations at Yale, Oxford, Georgetown, Princeton, and Rockwool Foundation. Unique combination of Arabic language proficiency and machine learning skills for social science research.
+
+---
+
+## 1. Website Architecture
+
+### Primary Navigation
+**Home | CV | Projects | Contact**
+
+### Site Structure
+- **Home** - Introduction, capabilities, university collaborations
+- **CV** - Complete career timeline, skills, education, projects
+- **Projects** - PRO-TEST proof-of-concept, current Yale tool development
+- **Contact** - Research collaboration inquiries
+
+---
+
+## 2. Homepage Content Flow
+
+### Hero Section
+- **Title:** "Research Data Scientist"
+- **Subtitle:** "Specializing in automated data collection and machine learning for social science research, with expertise in protest event datasets, Arabic-language processing, and research methodology."
+- **CTA Buttons:**
+  - Primary: "Get In Touch"
+  - Secondary: "View My CV"
+
+### What I Do Section
+**Three core capabilities:**
+
+1. **Event Dataset Curation**
+   - Developing protest event datasets from Arabic and English news sources
+   - Data collection strategies, quality control, team management
+
+2. **Research Automation**
+   - Python-based AI tools for automated data extraction
+   - Custom pipelines for Arabic news processing
+
+3. **Machine Learning for Social Research**
+   - ML models for social science questions
+   - Protest violence prediction, sentiment analysis
+
+### About Section
+**Positioning:** Research data scientist with 6+ years experience creating social impact through data-driven methods.
+
+**Key Highlights:**
+- Currently collaborating with Yale, Oxford, Rockwool Foundation
+- Previously: Georgetown, Princeton, American University of Beirut
+- Multilingual: Arabic, English, German, Turkish
+- Teaching: Data Science Lecturer at Le Wagon
+
+### University Collaborations Section
+**Visual Display with Logos (text placeholders):**
+
+1. **Yale University**
+   - Jordan protest event data & AI tool development
+
+2. **Oxford University**
+   - Market systems exploitation pilot conference
+
+3. **Georgetown University**
+   - Project Manager, Arab Spring event datasets (Sudan, Algeria, Lebanon)
+
+4. **Princeton University**
+   - Research Assistant, Egypt & Syria datasets
+
+5. **American University of Beirut**
+   - Lebanon social movements research (1889-2019)
+
+6. **Rockwool Foundation**
+   - Policy research on infrastructure & elections
+
+---
+
+## 3. CV Page Structure
+
+### Professional Experience Timeline
+- **Current Positions:**
+  - Research Data Scientist, Rockwool Foundation (Dec 2024-Present)
+  - Research Data Scientist, Yale University (Apr 2025-Present)
+  - Research Data Scientist, Oxford University (Apr 2025-Present)
+
+- **Previous Positions:**
+  - Project Manager, Georgetown University (Apr 2023-Oct 2024)
+  - Senior Research Assistant (Jan 2021-Jul 2023)
+  - Data Science Lecturer, Le Wagon (Apr 2023-Jul 2024)
+  - Research Assistant, Princeton University (Two separate periods)
+  - Research Assistant, American University of Beirut
+
+### Skills & Expertise
+**Programming:** Python, SQL
+
+**Machine Learning:** Scikit-learn, TensorFlow, Random Forest, Deep Learning
+
+**Data Analysis:** Pandas, NumPy, Matplotlib, Seaborn
+
+**Research Methods:**
+- Event Dataset Curation
+- Qualitative Coding
+- Data Preprocessing
+- Quality Control & Audits
+- Team Management
+
+**Domain Expertise:**
+- Protest Event Data
+- Arabic NLP
+- Social Movements
+- Political Science
+
+### Education & Training
+1. Data Science Bootcamp - Le Wagon (Apr-Jul 2022)
+2. Data Analysis with Python - FreeCodeCamp (Dec 2021-Feb 2022)
+3. Python for Everybody - University of Michigan (Feb-Apr 2021)
+4. Bachelor of Business Administration - Tishreen University (2015-2018)
+
+### Selected Projects
+**PRO-TEST: Protest Violence Prediction**
+- Proof-of-concept ML application
+- 13,000+ events analyzed
+- Random Forest model with 80% accuracy
+- Deployed on Streamlit
+- Educational demonstration of ML workflow
+
+### Languages
+- Arabic (Native)
+- English (Fluent)
+- German (Fluent)
+- Turkish (Conversational)
+
+---
+
+## 4. Projects Page
+
+### Main Project: PRO-TEST
+**Positioning:** Proof-of-concept demonstrating ML application to social science research
+
+**Technical Details:**
+- Dataset: 13,000+ protest event records
+- Methodology: Data cleaning, feature engineering, correlation analysis
+- Model: Random Forest classifier
+- Achievement: 80% prediction accuracy
+- Deployment: Streamlit web application
+- Purpose: Le Wagon capstone project
+
+**Clear Disclaimer:** This is a proof-of-concept for educational purposes, not a production research tool.
+
+### Current Work
+**Jordan Protest Event Data Collection Tool**
+- Collaboration with Yale University
+- Custom AI-powered automation
+- Ongoing development
+
+---
+
+## 5. Contact Page
+
+### Header
+"Get In Touch for Research Collaboration"
+
+### Introduction
+Open to discussing research collaboration opportunities in:
+- Protest event data
+- Arabic-language text processing
+- Machine learning for social science
+
+### Contact Information
+- Email: darwich.noah.95@gmail.com
+- Phone: +49 178 515 55 35
+- LinkedIn: noah-darwich
+- Location: Wuppertal, Germany (Remote Available)
+
+### Contact Form Fields
+- Name *
+- Email *
+- Institution/Organization
+- Inquiry Type (Research Collaboration, Academic Position, Consulting, Question, Other)
+- Message *
+
+**No pricing, no budget fields, no commercial language**
+
+### Research Interests Display
+- Protest event data collection and analysis
+- Arabic-language NLP
+- Machine learning for social science
+- Research automation and pipelines
+- MENA political dynamics
+- Social movements and collective action
+
+---
+
+## 6. Design Principles
+
+### Visual Identity
+- **Primary Color:** Indigo (#4f46e5 to #6366f1) - more academic, less commercial than purple
+- **Background:** Light grays (#f8fafc, #e2e8f0)
+- **Text:** Dark grays for readability (#2d3748, #4a5568, #64748b)
+
+### Typography
+- **Font:** Inter (modern, professional, readable)
+- **Headings:** Bold, clear hierarchy
+- **Body:** 1.6-1.7 line height for academic readability
+
+### Tone
+- **Professional but approachable**
+- **Evidence-based** (cite actual numbers from CV)
+- **Academic rather than commercial**
+- **Collaborative not sales-focused**
+
+### Content Guidelines
+- Use "research collaboration" not "hire me"
+- Use "projects" not "clients"
+- Cite specific universities and real work
+- Avoid marketing hyperbole
+- Focus on methodology and skills
+- Be specific about domain expertise
+
+---
+
+## 7. SEO Strategy
+
+### Primary Keywords
+- "research data scientist"
+- "protest event data"
+- "Arabic NLP"
+- "social science research automation"
+- "MENA political data"
+- "machine learning social science"
+
+### Meta Descriptions
+- Focus on research collaboration
+- Mention specific universities
+- Highlight unique skills (Arabic + ML)
+- Academic/research positioning
+
+---
+
+## 8. Success Metrics
+
+### Portfolio Website Goals
+- **Academic Visibility:** Discoverable by research institutions
+- **Professional Network:** Connect with social science researchers
+- **Collaboration Opportunities:** 5-10 research inquiries per month
+- **Career Advancement:** Position for research scientist roles
+- **Credibility:** Showcase verified experience and skills
+
+---
+
+## 9. Content Authenticity Checklist
+
+### What's REAL and Should Be Highlighted:
+✅ 6+ years research experience (2018-present)
+✅ Current: Yale, Oxford, Rockwool Foundation
+✅ Previous: Georgetown, Princeton, AUB
+✅ Project Manager role at Georgetown (led teams)
+✅ Data Science Lecturer at Le Wagon
+✅ PRO-TEST project (13k events, 80% accuracy)
+✅ Multilingual (Arabic, English, German, Turkish)
+✅ Protest event dataset expertise
+✅ Arabic-language data processing
+✅ Python, ML, data automation skills
+
+### What to AVOID:
+❌ Commercial pricing ($5k-250k ranges)
+❌ "AI Research Expert" - too broad
+❌ "500k+ documents processed" - unverified
+❌ "95%+ accuracy" - PRO-TEST was 80%
+❌ "Transform your business" - wrong audience
+❌ Skills not in CV (AWS, Docker, R, PyTorch)
+❌ "30% academic discount" - implies commercial focus
+❌ Over-promising capabilities
+
+---
+
+## 10. Implementation Notes
+
+### Technical Stack
+- Pure HTML, CSS, JavaScript
+- No build process needed
+- Static hosting (GitHub Pages, Netlify)
+- Mobile-responsive
+- Fast load times
+
+### Maintenance
+- Update with new collaborations
+- Add publications when available
+- Keep CV current
+- Showcase new projects
+- Maintain professional academic tone
+
+### Future Enhancements
+- Publications section (when available)
+- Blog for research insights
+- Data visualizations from projects
+- Academic paper links
+- Conference presentations
+
+---
+
+**This revision reflects the ACTUAL cv.txt content and positions Noah Darwich authentically as a research data scientist with specialized expertise in protest event data and Arabic NLP, targeting academic and policy research opportunities.**

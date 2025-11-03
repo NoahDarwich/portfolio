@@ -1,0 +1,165 @@
+## **Noah Darwich's CV**
+
+---
+
+### **Contact Information**
+* [cite_start]**Name:** Noah Darwich [cite: 1]
+* [cite_start]**Location:** Wuppertal, Germany [cite: 10, 23, 78]
+* [cite_start]**Phone:** 0178 515 55 35 [cite: 11, 24, 79]
+* [cite_start]**Email:** darwich.noah.95@gmail.com [cite: 12, 25, 80]
+* [cite_start]**LinkedIn:** noah-darwich [cite: 13, 26, 81]
+
+---
+
+### **Summary**
+[cite_start]Noah Darwich is a **data scientist** who focuses on using data-driven research to create social impact[cite: 2, 3, 22, 76]. [cite_start]He has a strong background in developing and curating event datasets related to protest movements[cite: 4]. [cite_start]His work involves using Python and machine learning to find meaningful patterns that help with societal understanding[cite: 5].
+
+---
+
+### **Employment History**
+
+* **Research Data Scientist**
+    * **Rockwool Foundation, Berlin (Germany)**
+    * [cite_start]**Dates:** December 2024 - Present [cite: 8, 9]
+    * **Responsibilities:**
+        * [cite_start]Conducting public policy research on the impact of infrastructure changes (e.g., hospital closures) on German election results[cite: 15].
+        * [cite_start]Performing data preprocessing and cleaning of public datasets[cite: 16].
+        * [cite_start]Collaborating with an interdisciplinary team to create research methodologies[cite: 17].
+
+* **Research Data Scientist (Freelance)**
+    * [cite_start]**Dates:** April 2025 - Present [cite: 18]
+    * **Responsibilities:**
+        * [cite_start]Collaborating on a pilot conference at Oxford University to examine exploitation, coercion, and slavery in market systems and address data gaps[cite: 19].
+        * [cite_start]Compiling and analyzing existing research to provide a comprehensive assessment of the current state of data in this field[cite: 20].
+
+* **Project Manager**
+    * **Georgetown University, Washington, D.C. (USA)**
+    * [cite_start]**Dates:** April 2023 - October 2024 [cite: 28, 29]
+    * **Responsibilities:**
+        * [cite_start]Developed a data collection strategy for quantitative event datasets on the second Arab Spring wave (2019) in Sudan, Algeria, and Lebanon[cite: 32].
+        * [cite_start]Oversaw all aspects of research projects, including planning and execution[cite: 33].
+        * [cite_start]Designed and conducted training sessions for research assistants[cite: 34].
+        * [cite_start]Managed and guided three teams of 2-5 research assistants[cite: 35].
+        * [cite_start]Implemented quality control measures and conducted data audits to ensure data accuracy[cite: 36].
+        * [cite_start]Developed automated research tools (Python scripts, AI models) to streamline data collection from Arabic news articles[cite: 37].
+
+* **Senior Research Assistant**
+    * [cite_start]**Dates:** January 2021 - July 2023 [cite: 38]
+    * **Responsibilities:**
+        * [cite_start]Developed algorithmic data collection methods in Python to automate data extraction[cite: 39].
+        * [cite_start]Collected and analyzed protest event data from the Iraqi Arab Spring protest wave (2011) and the 2019 Tishreen uprising, using local news and social media[cite: 39].
+        * [cite_start]Collected and analyzed qualitative data on Egypt's football ultras, focusing on home districts of ultras killed during and after the 2011 revolution[cite: 40].
+
+* **Data Science Lecturer**
+    * **Le Wagon, Cologne (Germany)**
+    * [cite_start]**Dates:** April 2023 - July 2024 [cite: 41, 42]
+    * **Responsibilities:**
+        * [cite_start]Guided students through data analysis, machine learning, and data visualization in a bootcamp setting[cite: 43].
+
+* **Senior Teaching Assistant**
+    * [cite_start]**Dates:** July 2022 - April 2023 [cite: 44]
+    * **Responsibilities:**
+        * [cite_start]Helped students with daily coding challenges, debugging, and reinforcing fundamental concepts[cite: 45].
+        * [cite_start]Supported students with their graduation projects[cite: 46].
+        * [cite_start]Spoke at workshops introducing data science topics like Python, SQL, and machine learning[cite: 47].
+
+* **Research Assistant**
+    * **Princeton University, New Jersey (USA)**
+    * [cite_start]**Dates:** April 2018 - October 2021 [cite: 48, 49]
+    * **Responsibilities:**
+        * [cite_start]Constructed a dataset of protest events in Egypt (2012-2013) using an Arabic-language newspaper[cite: 50].
+        * [cite_start]Analyzed data for trends and patterns and performed diagnostic assessments for accuracy[cite: 51].
+
+* **Research Assistant**
+    * **Princeton University, New Jersey (USA)**
+    * [cite_start]**Dates:** November 2019 - May 2020 [cite: 52, 53]
+    * **Responsibilities:**
+        * [cite_start]Contributed to a quantitative dataset collected through ethnographic fieldwork for the project "How money moves in wartime Syria"[cite: 55].
+
+* **Research Assistant**
+    * **American University of Beirut (Lebanon)**
+    * [cite_start]**Dates:** January 2019 - May 2021 [cite: 57, 58]
+    * **Responsibilities:**
+        * [cite_start]Collected and analyzed protest event data for "Social movements in post-war Lebanon" (1889-2019)[cite: 60].
+
+* **Marketing and Sales Administrator**
+    * **Shanghai Mall, Tartus (Syria)**
+    * [cite_start]**Dates:** March 2016 - November 2018 [cite: 61]
+    * **Responsibilities:**
+        * [cite_start]Developed marketing plans[cite: 63].
+        * [cite_start]Conducted market observation and price development[cite: 64].
+
+---
+
+### **Education**
+
+* **Data Science Bootcamp**
+    * **Le Wagon - Cologne**
+    * [cite_start]**Dates:** April 2022 - July 2022 [cite: 66, 67]
+    * [cite_start]**Courses:** Advanced Python & SQL, Data Analysis & Visualization, Un/supervised Machine Learning, Deep Learning & Neural Networks[cite: 68, 69, 70, 71].
+
+* **Bachelor of Business Administration**
+    * **Tishreen University, Latakia (Syria)**
+    * [cite_start]**Dates:** September 2015 - June 2018 [cite: 72, 73, 74]
+
+---
+
+### **Projects**
+
+* **PRO-TEST**
+    * [cite_start]**Description:** A machine learning web app that predicts violence at demonstrations[cite: 84, 86].
+    * **Achievements:**
+        * [cite_start]Applied data cleaning and feature engineering on over 13,000 event datasets[cite: 89].
+        * [cite_start]Analyzed data and tested correlations between features and targets[cite: 92].
+        * [cite_start]Built and fine-tuned a Random Forest model, achieving 80% accuracy[cite: 94].
+        * [cite_start]Deployed the model on Streamlit[cite: 94].
+
+---
+
+### **Courses**
+
+* **Data Analysis with Python**
+    * **FreeCodeCamp.org**
+    * [cite_start]**Dates:** December 2021 - February 2022 [cite: 97]
+    * [cite_start]**Topics:** Reading data from multiple sources, processing and visualizing data, and using libraries like NumPy, Pandas, Matplotlib, and Seaborn[cite: 98, 99, 100].
+
+* **Online Course Python**
+    * **Michigan University, Coursera**
+    * [cite_start]**Dates:** February 2021 - April 2021 [cite: 108]
+    * [cite_start]**Topics:** Reading data, Python data structures, and using Python to access web data[cite: 109, 110, 111].
+
+---
+
+### **Skills**
+
+* [cite_start]**Programming:** Python [cite: 102]
+* [cite_start]**Libraries:** Matplotlib, NumPy, Pandas, Scikit-learn, TensorFlow [cite: 103, 104]
+* [cite_start]**Concepts:** Data visualization, Machine Learning, Deep Learning [cite: 105, 106, 107]
+
+---
+
+### **Languages**
+
+* [cite_start]Arabic [cite: 87]
+* [cite_start]English [cite: 90]
+* [cite_start]German [cite: 93]
+* [cite_start]Turkish [cite: 95]
+
+---
+
+### **Volunteering**
+
+* **Volunteer Interpreter**
+    * **Safe Place Istanbul NGO, Istanbul (Turkey)**
+    * [cite_start]**Dates:** June 2018 - August 2019 [cite: 112, 113]
+    * [cite_start]**Responsibilities:** Providing interpretation services for an NGO that assists LGBTQ refugees[cite: 114].
+
+---
+
+### **Interests**
+
+* [cite_start]Politics [cite: 116]
+* [cite_start]Human rights [cite: 117]
+* [cite_start]Making music [cite: 118]
+* [cite_start]Chess [cite: 119]
+* [cite_start]Painting and drawing [cite: 120]
