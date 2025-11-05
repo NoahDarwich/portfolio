@@ -20,17 +20,21 @@
 
 * **Research Data Scientist**
     * **Rockwool Foundation, Berlin (Germany)**
-    * [cite_start]**Dates:** December 2024 - Present [cite: 8, 9]
+    * [cite_start]**Dates:** December 2024 - August 2025 [cite: 8, 9]
     * **Responsibilities:**
         * [cite_start]Conducting public policy research on the impact of infrastructure changes (e.g., hospital closures) on German election results[cite: 15].
         * [cite_start]Performing data preprocessing and cleaning of public datasets[cite: 16].
         * [cite_start]Collaborating with an interdisciplinary team to create research methodologies[cite: 17].
 
-* **Research Data Scientist (Freelance)**
+* **Freelance Research Data Scientist**
     * [cite_start]**Dates:** April 2025 - Present [cite: 18]
-    * **Responsibilities:**
-        * [cite_start]Collaborating on a pilot conference at Oxford University to examine exploitation, coercion, and slavery in market systems and address data gaps[cite: 19].
-        * [cite_start]Compiling and analyzing existing research to provide a comprehensive assessment of the current state of data in this field[cite: 20].
+    * **Projects:**
+        * **Yale University - Jordan Protest Events Project**
+            * [cite_start]Collaborating on Jordan protest event data project[cite: 18].
+            * [cite_start]Designing and implementing custom AI-powered tool for automated event data collection[cite: 18].
+        * **Oxford University - Exploitation & Market Systems Research**
+            * [cite_start]Collaborating on a pilot conference to examine exploitation, coercion, and slavery in market systems and address data gaps[cite: 19].
+            * [cite_start]Compiling and analyzing existing research to provide a comprehensive assessment of the current state of data in this field[cite: 20].
 
 * **Project Manager**
     * **Georgetown University, Washington, D.C. (USA)**
