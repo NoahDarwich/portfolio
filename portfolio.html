@@ -44,71 +44,70 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- CV Introduction -->
+    <section class="cv-intro">
         <div class="container">
-            <h1 class="page-title">Curriculum Vitae</h1>
-            <p class="page-subtitle">Research Data Scientist specializing in Protest Event Data & Arabic NLP</p>
-        </div>
-    </section>
-
-    <!-- About Section (Merged from About Page) -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">My Story</h2>
-                    <p class="about-description">
-                        I'm Noah Darwich, a data scientist passionate about using data-driven research to create social impact. 
-                        With expertise in developing automated research tools and analyzing complex social phenomena, 
-                        I help researchers and organizations make sense of large-scale datasets.
-                    </p>
-                    <div class="about-quick">
-                        <h3 class="about-subtitle">What I do</h3>
-                        <ul class="about-list">
-                            <li>Build automation pipelines (Python, AI) to collect and clean data from news, social media, and public sources</li>
-                            <li>Design and deploy machine learning models for social science questions (e.g., protest violence prediction)</li>
-                            <li>Curate, audit, and document event datasets with rigorous quality control</li>
-                            <li>Collaborate with interdisciplinary teams to develop research methodologies and insights</li>
-                        </ul>
-                    </div>
-                    <div class="expertise-areas">
-                        <div class="expertise-item">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Data Analysis</h3>
-                            <p>Advanced statistical analysis and pattern recognition in social science datasets</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-robot"></i>
-                            <h3>Automation Tools</h3>
-                            <p>Custom Python scripts and AI models for streamlined data collection and processing</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-globe"></i>
-                            <h3>Social Impact Research</h3>
-                            <p>Specialized in protest movements, political events, and social phenomena analysis</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-side">
-                    <div class="about-photo">
-                        <img src="profile1.jpg" alt="Noah Darwich portrait" width="400" height="400" loading="eager">
-                    </div>
-                </div>
+            <div class="cv-header">
+                <h2 class="cv-greeting">Welcome to my CV</h2>
+                <p class="cv-intro-text">
+                    I'm a Research Data Scientist with 6+ years of experience building automation tools and
+                    analyzing complex social phenomena. I specialize in protest event data, Arabic-language NLP,
+                    and machine learning for social science research. Currently collaborating with Yale, Oxford,
+                    Georgetown, and Princeton on large-scale data projects.
+                </p>
+                <p class="cv-cta-text">
+                    Select a section below to explore my background, or download the full PDF version.
+                </p>
             </div>
+
+            <!-- Section Navigation -->
+            <nav class="cv-nav">
+                <button class="cv-nav-link" data-tab="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </button>
+                <button class="cv-nav-link" data-tab="skills">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </button>
+                <button class="cv-nav-link" data-tab="education">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </button>
+                <button class="cv-nav-link" data-tab="languages">
+                    <i class="fas fa-globe"></i>
+                    <span>Languages</span>
+                </button>
+                <a href="NoahDarwich_CV.pdf" download class="cv-nav-link cv-nav-download">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </a>
+            </nav>
         </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline">
+    <!-- CV Content Container -->
+    <div class="cv-content-wrapper">
         <div class="container">
-            <h2 class="section-title">Career Timeline</h2>
+            <div id="cv-content" class="cv-content"></div>
+        </div>
+    </div>
+
+    <!-- Timeline Section (Hidden Template) -->
+    <section id="experience" class="timeline cv-section-template" data-section="experience" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Career Experience</h2>
             <div class="timeline-list">
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2024-12" data-end="present">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Data Scientist — Rockwool Foundation</h3>
-                        <span class="timeline-meta">Berlin, Germany • Dec 2024 – Present</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Dec 2024 – Present</span>
+                            <span class="timeline-location">Berlin, Germany</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Policy research on infrastructure change (e.g., hospital closures) and elections</li>
                             <li>Preprocessing and cleaning public datasets at scale</li>
@@ -116,33 +115,47 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2024-04" data-end="present">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Data Scientist — Yale University</h3>
-                        <span class="timeline-meta">Apr 2025 – Present</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2024 – Present</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Collaborating on Jordan protest event data project</li>
                             <li>Designing and implementing custom AI-powered tool for automated event data collection</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2024-04" data-end="present">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Data Scientist — Oxford University</h3>
-                        <span class="timeline-meta">Apr 2025 – Present</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2024 – Present</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Pilot conference on exploitation, coercion, and slavery in market systems</li>
                             <li>Compiling and analyzing research to assess data gaps in the field</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2023-04" data-end="2024-10">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Project Manager — Georgetown University</h3>
-                        <span class="timeline-meta">Washington, D.C., USA • Apr 2023 – Oct 2024</span>
+                        <span class="timeline-continuation">Continued from Independent Research</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2023 – Oct 2024</span>
+                            <span class="timeline-location">Washington, D.C., USA</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Strategy for event datasets during 2019 protest wave (Sudan, Algeria, Lebanon)</li>
                             <li>Training, QA, audits; managed three RA teams</li>
@@ -150,11 +163,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2021-01" data-end="2023-07">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Senior Research Assistant</h3>
-                        <span class="timeline-meta">Jan 2021 – Jul 2023</span>
+                        <h3>Senior Research Assistant — Independent Research</h3>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Jan 2021 – Jul 2023</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Algorithmic data collection in Python</li>
                             <li>Analyzed protest data from Iraq (2011, 2019)</li>
@@ -162,53 +179,78 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2023-04" data-end="2024-07">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Data Science Lecturer — Le Wagon</h3>
-                        <span class="timeline-meta">Cologne, Germany • Apr 2023 – Jul 2024</span>
+                        <span class="timeline-continuation">Continued at Le Wagon</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2023 – Jul 2024</span>
+                            <span class="timeline-location">Cologne, Germany</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Taught data analysis, machine learning, and visualization</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2022-07" data-end="2023-04">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Senior Teaching Assistant — Le Wagon</h3>
-                        <span class="timeline-meta">Jul 2022 – Apr 2023</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Jul 2022 – Apr 2023</span>
+                            <span class="timeline-location">Cologne, Germany</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Supported coding challenges and capstone projects</li>
                             <li>Workshops on Python, SQL, and ML</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2018-04" data-end="2021-10">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Assistant — Princeton University</h3>
-                        <span class="timeline-meta">New Jersey, USA • Apr 2018 – Oct 2021</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2018 – Oct 2021</span>
+                            <span class="timeline-location">New Jersey, USA</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Egypt protest event dataset (2012–2013) from Arabic newspaper</li>
                             <li>Trend analysis and diagnostic checks</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2019-11" data-end="2020-05">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Assistant — Princeton University</h3>
-                        <span class="timeline-meta">Nov 2019 – May 2020</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Nov 2019 – May 2020</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Contributed to wartime Syria money flow dataset via fieldwork</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2019-01" data-end="2021-05">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Research Assistant — American University of Beirut</h3>
-                        <span class="timeline-meta">Lebanon • Jan 2019 – May 2021</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Jan 2019 – May 2021</span>
+                            <span class="timeline-location">Lebanon</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Collected and analyzed protest data for 1889–2019 Lebanon study</li>
                         </ul>
@@ -218,8 +260,8 @@
         </div>
     </section>
 
-    <!-- Skills & Expertise -->
-    <section class="skills-section">
+    <!-- Skills & Expertise (Hidden Template) -->
+    <section id="skills" class="skills-section cv-section-template" data-section="skills" style="display: none;">
         <div class="container">
             <h2 class="section-title">Technical Skills & Expertise</h2>
             <div class="skills-grid">
@@ -271,16 +313,21 @@
         </div>
     </section>
 
-    <!-- Education & Training -->
-    <section class="skills-section">
+    <!-- Education & Training (Hidden Template) -->
+    <section id="education" class="skills-section cv-section-template" data-section="education" style="display: none;">
         <div class="container">
             <h2 class="section-title">Education & Training</h2>
             <div class="timeline-list">
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2022-04" data-end="2022-07">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Data Science Bootcamp — Le Wagon</h3>
-                        <span class="timeline-meta">Cologne, Germany • Apr 2022 – Jul 2022</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Apr 2022 – Jul 2022</span>
+                            <span class="timeline-location">Cologne, Germany</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Advanced Python & SQL</li>
                             <li>Data Analysis & Visualization</li>
@@ -289,61 +336,54 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2021-12" data-end="2022-02">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Data Analysis with Python — FreeCodeCamp.org</h3>
-                        <span class="timeline-meta">Dec 2021 – Feb 2022</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Dec 2021 – Feb 2022</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>NumPy, Pandas, Matplotlib, Seaborn</li>
                             <li>Data processing and visualization</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2021-02" data-end="2021-04">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Python for Everybody — University of Michigan (Coursera)</h3>
-                        <span class="timeline-meta">Feb 2021 – Apr 2021</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Feb 2021 – Apr 2021</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                         <ul>
                             <li>Python data structures</li>
                             <li>Web data access with Python</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-start="2015-09" data-end="2018-06">
+                    <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Bachelor of Business Administration — Tishreen University</h3>
-                        <span class="timeline-meta">Latakia, Syria • Sep 2015 – Jun 2018</span>
+                        <span class="timeline-meta">
+                            <span class="timeline-date-badge">Sep 2015 – Jun 2018</span>
+                            <span class="timeline-location">Latakia, Syria</span>
+                        </span>
+                        <span class="timeline-duration-text"></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>PRO-TEST: Protest Violence Prediction</h3>
-                    <p>Machine learning web application that predicts violence at demonstrations. Developed as capstone project for Le Wagon Data Science Bootcamp.</p>
-                    <div class="portfolio-results">
-                        <span class="result-tag">13,000+ events analyzed</span>
-                        <span class="result-tag">Random Forest model</span>
-                        <span class="result-tag">80% accuracy</span>
-                        <span class="result-tag">Deployed on Streamlit</span>
-                    </div>
-                    <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;"><em>Proof-of-concept demonstrating ML application to social science research questions</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Languages -->
-    <section class="languages-section">
+    <!-- Languages (Hidden Template) -->
+    <section id="languages" class="languages-section cv-section-template" data-section="languages" style="display: none;">
         <div class="container">
             <h2 class="section-title">Languages</h2>
             <div class="languages-grid">
@@ -402,12 +442,12 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2024 Noah Darwich - AI Research Expert. All rights reserved.</p>
+                    <p>&copy; 2024 Noah Darwich - Research Data Scientist. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -349,3 +349,176 @@ function animateNumber(element, start, end, duration, isPercentage = false, isPl
 }
 
 // Fade animation styles are now in styles.css to prevent duplication and flashing
+
+// CV Tab Switching Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const cvNavLinks = document.querySelectorAll('.cv-nav-link[data-tab]');
+    const cvContent = document.getElementById('cv-content');
+
+    if (!cvNavLinks.length || !cvContent) return;
+
+    // Function to show selected tab content
+    function showTab(tabName) {
+        // Find the section template
+        const section = document.querySelector(`[data-section="${tabName}"]`);
+        if (!section) return;
+
+        // Clone the section content
+        const sectionClone = section.cloneNode(true);
+        sectionClone.style.display = 'block';
+        sectionClone.classList.remove('cv-section-template');
+        sectionClone.classList.add('cv-section-active');
+
+        // Clear current content and add new content with fade-in animation
+        cvContent.style.opacity = '0';
+
+        setTimeout(() => {
+            cvContent.innerHTML = '';
+            cvContent.appendChild(sectionClone);
+            cvContent.style.opacity = '1';
+
+            // Scroll to content smoothly
+            setTimeout(() => {
+                cvContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }, 200);
+
+        // Update active state on buttons
+        cvNavLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+
+    // Add click handlers to all tab buttons
+    cvNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const tabName = this.getAttribute('data-tab');
+            showTab(tabName);
+        });
+    });
+
+    // Optionally show first tab by default
+    // showTab('experience');
+});
+
+// ============================================
+// TIMELINE DURATION CALCULATOR
+// ============================================
+
+/**
+ * Parse date string to Date object
+ * Handles formats like "YYYY-MM"
+ */
+function parseDate(dateStr) {
+    const [year, month] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, 1);
+}
+
+/**
+ * Calculate duration in months between two dates
+ */
+function monthDiff(startDate, endDate) {
+    return (endDate.getFullYear() - startDate.getFullYear()) * 12
+           + (endDate.getMonth() - startDate.getMonth());
+}
+
+/**
+ * Map duration in months to pixel height for duration bar
+ * Scale: 40-200px range for 1-60 months
+ */
+function mapDurationToHeight(months) {
+    const minHeight = 40;
+    const maxHeight = 200;
+    const minMonths = 1;
+    const maxMonths = 60;
+
+    const clampedMonths = Math.max(minMonths, Math.min(maxMonths, months));
+    const ratio = (clampedMonths - minMonths) / (maxMonths - minMonths);
+
+    return minHeight + (ratio * (maxHeight - minHeight));
+}
+
+/**
+ * Format duration for display
+ * Examples: "3 months", "1 year", "2 years 3 months"
+ */
+function formatDuration(months) {
+    if (months < 1) return 'Less than a month';
+    if (months === 1) return '1 month';
+    if (months < 12) return `${months} months`;
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    let result = years === 1 ? '1 year' : `${years} years`;
+    if (remainingMonths > 0) {
+        result += ` ${remainingMonths} month${remainingMonths > 1 ? 's' : ''}`;
+    }
+
+    return result;
+}
+
+/**
+ * Calculate duration from start and end date strings
+ */
+function calculateDuration(startStr, endStr) {
+    const start = parseDate(startStr);
+    const end = endStr.toLowerCase() === 'present' ? new Date() : parseDate(endStr);
+
+    const months = monthDiff(start, end);
+
+    return {
+        months: months,
+        height: mapDurationToHeight(months),
+        text: formatDuration(months)
+    };
+}
+
+/**
+ * Initialize timeline durations for all timeline items
+ */
+function initTimelineDurations() {
+    const timelineItems = document.querySelectorAll('.timeline-item[data-start]');
+
+    timelineItems.forEach(item => {
+        const start = item.getAttribute('data-start');
+        const end = item.getAttribute('data-end') || 'present';
+
+        if (!start) return;
+
+        const duration = calculateDuration(start, end);
+
+        // Set duration bar height
+        const durationBar = item.querySelector('.timeline-duration-bar');
+        if (durationBar) {
+            durationBar.style.height = duration.height + 'px';
+        }
+
+        // Set duration text
+        const durationText = item.querySelector('.timeline-duration-text');
+        if (durationText) {
+            durationText.textContent = duration.text;
+        }
+    });
+}
+
+// Initialize on DOM ready and set up tab switching
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize timeline durations on page load
+    initTimelineDurations();
+
+    // Re-initialize when CV tabs are switched
+    const cvNavLinks = document.querySelectorAll('.cv-nav-link[data-tab]');
+    cvNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            setTimeout(function() {
+                initTimelineDurations();
+            }, 250);
+        });
+    });
+});
