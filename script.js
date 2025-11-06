@@ -377,10 +377,10 @@ document.addEventListener('DOMContentLoaded', function() {
             cvContent.appendChild(sectionClone);
             cvContent.style.opacity = '1';
 
-            // Scroll to content smoothly
-            setTimeout(() => {
-                cvContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
+            // Initialize interactive timeline after content is loaded
+            if (tabName === 'experience') {
+                initializeInteractiveTimeline();
+            }
         }, 200);
 
         // Update active state on buttons
@@ -402,9 +402,129 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Optionally show first tab by default
-    // showTab('experience');
+    // Auto-load Experience section on page load
+    showTab('experience');
 });
+
+// ============================================
+// INTERACTIVE TIMELINE
+// ============================================
+
+function initializeInteractiveTimeline() {
+    const interactiveItems = document.querySelectorAll('.timeline-interactive');
+
+    interactiveItems.forEach(item => {
+        const positionId = item.getAttribute('data-position-id');
+        let isAutoExpanded = false;
+
+        // Populate details from cv-data.js if available
+        if (typeof cvPositions !== 'undefined' && cvPositions[positionId]) {
+            populateTimelineDetails(item, cvPositions[positionId]);
+
+            // Auto-expand if position has 2 or fewer responsibilities
+            const data = cvPositions[positionId];
+            if (data.responsibilities && data.responsibilities.length <= 2) {
+                item.classList.add('expanded');
+                isAutoExpanded = true;
+                // Hide the click indicator since it's already expanded
+                const indicator = item.querySelector('.hover-indicator');
+                if (indicator) {
+                    indicator.style.display = 'none';
+                }
+                // Remove cursor pointer for auto-expanded items
+                item.style.cursor = 'default';
+            }
+        }
+
+        // Add click event to toggle expanded state (only for non-auto-expanded items)
+        item.addEventListener('click', function(e) {
+            if (!isAutoExpanded) {
+                this.classList.toggle('expanded');
+            }
+        });
+    });
+}
+
+function populateTimelineDetails(element, data) {
+    const responsibilitiesList = element.querySelector('.responsibilities-list');
+
+    if (responsibilitiesList && data.responsibilities) {
+        // Clear existing items
+        responsibilitiesList.innerHTML = '';
+
+        // Add each responsibility
+        data.responsibilities.forEach(responsibility => {
+            const li = document.createElement('li');
+            li.textContent = responsibility;
+            responsibilitiesList.appendChild(li);
+        });
+    }
+
+    // Populate skill visualizations if available
+    if (data.skills && data.skills.length > 0) {
+        populateSkillBreakdown(element, data.skills);
+    }
+}
+
+function populateSkillBreakdown(element, skills) {
+    const stackedBar = element.querySelector('.skills-stacked-bar');
+    const individualBars = element.querySelector('.skills-individual-bars');
+
+    if (!stackedBar || !individualBars) return;
+
+    // Create stacked bar segments
+    stackedBar.innerHTML = '';
+    skills.forEach(skill => {
+        const segment = document.createElement('div');
+        segment.className = `skill-segment skill-${skill.category}`;
+        segment.style.width = `${skill.percentage}%`;
+
+        // Only show label if segment is large enough
+        if (skill.percentage >= 15) {
+            segment.textContent = `${skill.percentage}%`;
+        }
+
+        segment.title = `${skill.name}: ${skill.percentage}%`;
+        stackedBar.appendChild(segment);
+    });
+
+    // Create individual skill bars
+    individualBars.innerHTML = '';
+    skills.forEach(skill => {
+        const barItem = document.createElement('div');
+        barItem.className = 'skill-bar-item';
+
+        barItem.innerHTML = `
+            <div class="skill-bar-header">
+                <span class="skill-bar-name">${skill.name}</span>
+                <span class="skill-bar-percentage">${skill.percentage}%</span>
+            </div>
+            <div class="skill-bar-track">
+                <div class="skill-bar-fill skill-${skill.category}" data-percentage="${skill.percentage}"></div>
+            </div>
+        `;
+
+        individualBars.appendChild(barItem);
+    });
+
+    // Animate skill bars when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fills = entry.target.querySelectorAll('.skill-bar-fill');
+                fills.forEach(fill => {
+                    const percentage = fill.getAttribute('data-percentage');
+                    setTimeout(() => {
+                        fill.style.width = `${percentage}%`;
+                    }, 100);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(element);
+}
 
 // ============================================
 // TIMELINE DURATION CALCULATOR
