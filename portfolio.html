@@ -48,21 +48,17 @@
     <section class="cv-intro">
         <div class="container">
             <div class="cv-header">
-                <h2 class="cv-greeting">Welcome to my CV</h2>
                 <p class="cv-intro-text">
                     I'm a Research Data Scientist with 6+ years of experience building automation tools and
                     analyzing complex social phenomena. I specialize in protest event data, Arabic-language NLP,
                     and machine learning for social science research. Currently collaborating with Yale, Oxford,
                     Georgetown, and Princeton on large-scale data projects.
                 </p>
-                <p class="cv-cta-text">
-                    Select a section below to explore my background, or download the full PDF version.
-                </p>
             </div>
 
             <!-- Section Navigation -->
             <nav class="cv-nav">
-                <button class="cv-nav-link" data-tab="experience">
+                <button class="cv-nav-link active" data-tab="experience">
                     <i class="fas fa-briefcase"></i>
                     <span>Experience</span>
                 </button>
@@ -73,10 +69,6 @@
                 <button class="cv-nav-link" data-tab="education">
                     <i class="fas fa-graduation-cap"></i>
                     <span>Education</span>
-                </button>
-                <button class="cv-nav-link" data-tab="languages">
-                    <i class="fas fa-globe"></i>
-                    <span>Languages</span>
                 </button>
                 <a href="NoahDarwich_CV.pdf" download class="cv-nav-link cv-nav-download">
                     <i class="fas fa-download"></i>
@@ -109,41 +101,92 @@
                         <span class="timeline-duration-text"></span>
 
                         <div class="position-progression freelance-projects">
-                            <div class="position-block">
-                                <h4 class="position-title">Yale University — Jordan Protest Events Project</h4>
-                                <span class="position-dates">Apr 2025 – Present</span>
-                                <ul>
-                                    <li>Collaborating on Jordan protest event data project</li>
-                                    <li>Designing and implementing custom AI-powered tool for automated event data collection</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="freelance-yale-2025">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Yale University — Jordan Protest Events Project</h4>
+                                    <span class="position-dates">Apr 2025 – Present</span>
+                                    <ul class="timeline-summary">
+                                        <li>Collaborating on Jordan protest event data project</li>
+                                        <li>Designing and implementing custom AI-powered tool for automated event data collection</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="position-block">
-                                <h4 class="position-title">Oxford University — Exploitation & Market Systems Research</h4>
-                                <span class="position-dates">Apr 2025 – Present</span>
-                                <ul>
-                                    <li>Pilot conference on exploitation, coercion, and slavery in market systems</li>
-                                    <li>Compiling and analyzing research to assess data gaps in the field</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="freelance-oxford-2025">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Oxford University — Exploitation & Market Systems Research</h4>
+                                    <span class="position-dates">Apr 2025 – Present</span>
+                                    <ul class="timeline-summary">
+                                        <li>Pilot conference on exploitation, coercion, and slavery in market systems</li>
+                                        <li>Compiling and analyzing research to assess data gaps in the field</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-start="2024-12" data-end="2025-08">
+                <div class="timeline-item timeline-interactive" data-start="2024-12" data-end="2025-08" data-position-id="rockwool-2024">
                     <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Research Data Scientist — Rockwool Foundation</h3>
-                        <span class="timeline-meta">
-                            <span class="timeline-date-badge">Dec 2024 – Aug 2025</span>
-                            <span class="timeline-location">Berlin, Germany</span>
-                        </span>
-                        <span class="timeline-duration-text"></span>
-                        <ul>
-                            <li>Policy research on infrastructure change (e.g., hospital closures) and elections</li>
-                            <li>Preprocessing and cleaning public datasets at scale</li>
-                            <li>Collaboration on research design and methodology</li>
-                        </ul>
+                        <div class="timeline-main">
+                            <h3>Research Data Scientist — Rockwool Foundation</h3>
+                            <span class="timeline-meta">
+                                <span class="timeline-date-badge">Dec 2024 – Aug 2025</span>
+                                <span class="timeline-location">Berlin, Germany</span>
+                            </span>
+                            <span class="timeline-duration-text"></span>
+                            <ul class="timeline-summary">
+                                <li>Policy research on infrastructure change (e.g., hospital closures) and elections</li>
+                                <li>Preprocessing and cleaning public datasets at scale</li>
+                                <li>Collaboration on research design and methodology</li>
+                            </ul>
+                            <div class="hover-indicator">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Click for more details</span>
+                            </div>
+                            <div class="timeline-details">
+                                <h4>Detailed Responsibilities</h4>
+                                <ul class="responsibilities-list"></ul>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <div class="skills-breakdown-section">
+                                <h4>Skills</h4>
+                                <div class="skills-stacked-bar"></div>
+                                <div class="skills-individual-bars"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item timeline-item-progression" data-start="2021-01" data-end="2024-10">
@@ -158,24 +201,58 @@
                         <span class="timeline-duration-text"></span>
 
                         <div class="position-progression">
-                            <div class="position-block">
-                                <h4 class="position-title">Project Manager</h4>
-                                <span class="position-dates">Apr 2023 – Oct 2024</span>
-                                <ul>
-                                    <li>Strategy for event datasets during 2019 protest wave (Sudan, Algeria, Lebanon)</li>
-                                    <li>Training, QA, audits; managed three RA teams</li>
-                                    <li>Automated Arabic news collection (Python, AI)</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="georgetown-pm-2023">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Project Manager</h4>
+                                    <span class="position-dates">Apr 2023 – Oct 2024</span>
+                                    <ul class="timeline-summary">
+                                        <li>Strategy for event datasets during 2019 protest wave (Sudan, Algeria, Lebanon)</li>
+                                        <li>Training, QA, audits; managed three RA teams</li>
+                                        <li>Automated Arabic news collection (Python, AI)</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="position-block">
-                                <h4 class="position-title">Senior Research Assistant</h4>
-                                <span class="position-dates">Jan 2021 – Jul 2023</span>
-                                <ul>
-                                    <li>Algorithmic data collection in Python</li>
-                                    <li>Analyzed protest data from Iraq (2011, 2019)</li>
-                                    <li>Qualitative analysis on Egypt's football ultras</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="georgetown-sra-2021">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Senior Research Assistant</h4>
+                                    <span class="position-dates">Jan 2021 – Jul 2023</span>
+                                    <ul class="timeline-summary">
+                                        <li>Algorithmic data collection in Python</li>
+                                        <li>Analyzed protest data from Iraq (2011, 2019)</li>
+                                        <li>Qualitative analysis on Egypt's football ultras</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,68 +269,153 @@
                         <span class="timeline-duration-text"></span>
 
                         <div class="position-progression">
-                            <div class="position-block">
-                                <h4 class="position-title">Data Science Lecturer</h4>
-                                <span class="position-dates">Apr 2023 – Jul 2024</span>
-                                <ul>
-                                    <li>Taught data analysis, machine learning, and visualization</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="lewagon-lecturer-2023">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Data Science Lecturer</h4>
+                                    <span class="position-dates">Apr 2023 – Jul 2024</span>
+                                    <ul class="timeline-summary">
+                                        <li>Taught data analysis, machine learning, and visualization</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="position-block">
-                                <h4 class="position-title">Senior Teaching Assistant</h4>
-                                <span class="position-dates">Jul 2022 – Apr 2023</span>
-                                <ul>
-                                    <li>Supported coding challenges and capstone projects</li>
-                                    <li>Workshops on Python, SQL, and ML</li>
-                                </ul>
+                            <div class="position-block timeline-interactive" data-position-id="lewagon-ta-2022">
+                                <div class="timeline-main">
+                                    <h4 class="position-title">Senior Teaching Assistant</h4>
+                                    <span class="position-dates">Jul 2022 – Apr 2023</span>
+                                    <ul class="timeline-summary">
+                                        <li>Supported coding challenges and capstone projects</li>
+                                        <li>Workshops on Python, SQL, and ML</li>
+                                    </ul>
+                                    <div class="hover-indicator">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span>Click for more details</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <h4>Detailed Responsibilities</h4>
+                                        <ul class="responsibilities-list"></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-skills">
+                                    <div class="skills-breakdown-section">
+                                        <h4>Skills</h4>
+                                        <div class="skills-stacked-bar"></div>
+                                        <div class="skills-individual-bars"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-start="2018-04" data-end="2021-10">
+                <div class="timeline-item timeline-interactive" data-start="2018-04" data-end="2021-10" data-position-id="princeton-ra-2018">
                     <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Research Assistant — Princeton University</h3>
-                        <span class="timeline-meta">
-                            <span class="timeline-date-badge">Apr 2018 – Oct 2021</span>
-                            <span class="timeline-location">New Jersey, USA</span>
-                        </span>
-                        <span class="timeline-duration-text"></span>
-                        <ul>
-                            <li>Egypt protest event dataset (2012–2013) from Arabic newspaper</li>
-                            <li>Trend analysis and diagnostic checks</li>
-                        </ul>
+                        <div class="timeline-main">
+                            <h3>Research Assistant — Princeton University</h3>
+                            <span class="timeline-meta">
+                                <span class="timeline-date-badge">Apr 2018 – Oct 2021</span>
+                                <span class="timeline-location">New Jersey, USA</span>
+                            </span>
+                            <span class="timeline-duration-text"></span>
+                            <ul class="timeline-summary">
+                                <li>Egypt protest event dataset (2012–2013) from Arabic newspaper</li>
+                                <li>Trend analysis and diagnostic checks</li>
+                            </ul>
+                            <div class="hover-indicator">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Click for more details</span>
+                            </div>
+                            <div class="timeline-details">
+                                <h4>Detailed Responsibilities</h4>
+                                <ul class="responsibilities-list"></ul>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <div class="skills-breakdown-section">
+                                <h4>Skills</h4>
+                                <div class="skills-stacked-bar"></div>
+                                <div class="skills-individual-bars"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-start="2019-11" data-end="2020-05">
+                <div class="timeline-item timeline-interactive" data-start="2019-11" data-end="2020-05" data-position-id="princeton-fieldwork-2019">
                     <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Research Assistant — Princeton University</h3>
-                        <span class="timeline-meta">
-                            <span class="timeline-date-badge">Nov 2019 – May 2020</span>
-                        </span>
-                        <span class="timeline-duration-text"></span>
-                        <ul>
-                            <li>Contributed to wartime Syria money flow dataset via fieldwork</li>
-                        </ul>
+                        <div class="timeline-main">
+                            <h3>Research Assistant — Princeton University</h3>
+                            <span class="timeline-meta">
+                                <span class="timeline-date-badge">Nov 2019 – May 2020</span>
+                            </span>
+                            <span class="timeline-duration-text"></span>
+                            <ul class="timeline-summary">
+                                <li>Contributed to wartime Syria money flow dataset via fieldwork</li>
+                            </ul>
+                            <div class="hover-indicator">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Click for more details</span>
+                            </div>
+                            <div class="timeline-details">
+                                <h4>Detailed Responsibilities</h4>
+                                <ul class="responsibilities-list"></ul>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <div class="skills-breakdown-section">
+                                <h4>Skills</h4>
+                                <div class="skills-stacked-bar"></div>
+                                <div class="skills-individual-bars"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-start="2019-01" data-end="2021-05">
+                <div class="timeline-item timeline-interactive" data-start="2019-01" data-end="2021-05" data-position-id="aub-ra-2019">
                     <div class="timeline-duration-bar"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Research Assistant — American University of Beirut</h3>
-                        <span class="timeline-meta">
-                            <span class="timeline-date-badge">Jan 2019 – May 2021</span>
-                            <span class="timeline-location">Lebanon</span>
-                        </span>
-                        <span class="timeline-duration-text"></span>
-                        <ul>
-                            <li>Collected and analyzed protest data for 1889–2019 Lebanon study</li>
-                        </ul>
+                        <div class="timeline-main">
+                            <h3>Research Assistant — American University of Beirut</h3>
+                            <span class="timeline-meta">
+                                <span class="timeline-date-badge">Jan 2019 – May 2021</span>
+                                <span class="timeline-location">Lebanon</span>
+                            </span>
+                            <span class="timeline-duration-text"></span>
+                            <ul class="timeline-summary">
+                                <li>Collected and analyzed protest data for 1889–2019 Lebanon study</li>
+                            </ul>
+                            <div class="hover-indicator">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Click for more details</span>
+                            </div>
+                            <div class="timeline-details">
+                                <h4>Detailed Responsibilities</h4>
+                                <ul class="responsibilities-list"></ul>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <div class="skills-breakdown-section">
+                                <h4>Skills</h4>
+                                <div class="skills-stacked-bar"></div>
+                                <div class="skills-individual-bars"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,49 +426,80 @@
     <section id="skills" class="skills-section cv-section-template" data-section="skills" style="display: none;">
         <div class="container">
             <h2 class="section-title">Technical Skills & Expertise</h2>
-            <div class="skills-grid">
+            <div class="skills-grid-enhanced">
                 <div class="skill-category">
-                    <h3>Programming</h3>
+                    <h3 class="skill-category-header"><i class="fas fa-code"></i> Programming & Development</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Machine Learning</h3>
+                    <h3 class="skill-category-header"><i class="fas fa-brain"></i> Machine Learning & AI</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Scikit-learn</span>
                         <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">Random Forest</span>
                         <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">LLMs</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Analysis & Visualization</h3>
+                    <h3 class="skill-category-header"><i class="fas fa-chart-line"></i> Data Analysis & Visualization</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
                         <span class="skill-tag">Matplotlib</span>
                         <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Jupyter</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Research Methods</h3>
+                    <h3 class="skill-category-header"><i class="fas fa-tasks"></i> Research & Project Management</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Event Dataset Curation</span>
                         <span class="skill-tag">Qualitative Coding</span>
                         <span class="skill-tag">Data Preprocessing</span>
                         <span class="skill-tag">Quality Control & Audits</span>
                         <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Research Design</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Domain Expertise</h3>
+                    <h3 class="skill-category-header"><i class="fas fa-book"></i> Domain Expertise</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Protest Event Data</span>
                         <span class="skill-tag">Arabic NLP</span>
                         <span class="skill-tag">Social Movements</span>
                         <span class="skill-tag">Political Science</span>
+                        <span class="skill-tag">Middle East Studies</span>
+                        <span class="skill-tag">Computational Social Science</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Languages</h3>
+                    <div class="skill-tags languages-tags">
+                        <span class="skill-tag language-tag">
+                            <span class="language-name">Arabic</span>
+                            <span class="language-level">Native</span>
+                        </span>
+                        <span class="skill-tag language-tag">
+                            <span class="language-name">English</span>
+                            <span class="language-level">Fluent</span>
+                        </span>
+                        <span class="skill-tag language-tag">
+                            <span class="language-name">German</span>
+                            <span class="language-level">Fluent</span>
+                        </span>
+                        <span class="skill-tag language-tag">
+                            <span class="language-name">Turkish</span>
+                            <span class="language-level">Conversational</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -378,30 +571,6 @@
         </div>
     </section>
 
-    <!-- Languages (Hidden Template) -->
-    <section id="languages" class="languages-section cv-section-template" data-section="languages" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Languages</h2>
-            <div class="languages-grid">
-                <div class="language-item">
-                    <span class="language-name">Arabic</span>
-                    <span class="language-level">Native</span>
-                </div>
-                <div class="language-item">
-                    <span class="language-name">English</span>
-                    <span class="language-level">Fluent</span>
-                </div>
-                <div class="language-item">
-                    <span class="language-name">German</span>
-                    <span class="language-level">Fluent</span>
-                </div>
-                <div class="language-item">
-                    <span class="language-name">Turkish</span>
-                    <span class="language-level">Conversational</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -444,6 +613,7 @@
         </div>
     </footer>
 
+    <script src="cv-data.js"></script>
     <script src="script.js?v=3"></script>
 </body>
 </html>
