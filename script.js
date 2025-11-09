@@ -461,11 +461,14 @@ function populateSkillBreakdown(element, skills) {
 
     if (!individualBars) return;
 
-    // Create individual skill bars with unified color
+    // Create individual skill bars with unique colors per skill
     individualBars.innerHTML = '';
     skills.forEach(skill => {
         const barItem = document.createElement('div');
         barItem.className = 'skill-bar-item';
+
+        // Get unique color for this skill (default to brand color if not found)
+        const skillColor = skillColors[skill.name] || '#667eea';
 
         barItem.innerHTML = `
             <div class="skill-bar-header">
@@ -473,7 +476,7 @@ function populateSkillBreakdown(element, skills) {
                 <span class="skill-bar-percentage">${skill.percentage}%</span>
             </div>
             <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-percentage="${skill.percentage}"></div>
+                <div class="skill-bar-fill" data-percentage="${skill.percentage}" style="background: ${skillColor};"></div>
             </div>
         `;
 

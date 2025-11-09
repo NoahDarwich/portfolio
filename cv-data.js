@@ -1,13 +1,48 @@
 // CV Position Data Structure
 // Used for interactive timeline cards and skill visualizations
 
-const skillCategoryColors = {
-    technical: '#667eea',
-    management: '#764ba2',
-    research: '#4ecdc4',
-    communication: '#f6ad55',
-    process: '#48bb78',
-    domain: '#ed64a6'
+// Unique color for each skill (consistent across all positions)
+const skillColors = {
+    'Python': '#667eea',
+    'AI/LLMs': '#8b5cf6',
+    'AI Automation': '#a78bfa',
+    'Data Collection': '#4ecdc4',
+    'Tool Development': '#06b6d4',
+    'Client Collaboration': '#f6ad55',
+    'Research Design': '#14b8a6',
+    'Literature Review': '#2dd4bf',
+    'Data Gap Analysis': '#5eead4',
+    'Academic Writing': '#fb923c',
+    'Political Economy': '#f59e0b',
+    'Data Preprocessing': '#3b82f6',
+    'Policy Research': '#60a5fa',
+    'Team Collaboration': '#fbbf24',
+    'Team Management': '#764ba2',
+    'Quality Assurance': '#48bb78',
+    'Training & Mentoring': '#fdba74',
+    'Arabic NLP': '#ec4899',
+    'Data Analysis': '#0ea5e9',
+    'Qualitative Research': '#22d3ee',
+    'Middle East Studies': '#f472b6',
+    'Algorithmic Collection': '#818cf8',
+    'Teaching': '#fb7185',
+    'Machine Learning': '#6366f1',
+    'Data Visualization': '#10b981',
+    'Curriculum Design': '#34d399',
+    'Teaching Support': '#fca5a5',
+    'SQL': '#4f46e5',
+    'Mentoring': '#f97316',
+    'Dataset Construction': '#06b6d4',
+    'Arabic Language': '#db2777',
+    'Trend Analysis': '#2563eb',
+    'Data Validation': '#059669',
+    'Political Science': '#be185d',
+    'Field Research': '#0891b2',
+    'Conflict Zones': '#dc2626',
+    'Adaptability': '#84cc16',
+    'Historical Analysis': '#0284c7',
+    'Lebanese History': '#9333ea',
+    'Archival Research': '#7c3aed'
 };
 
 const cvPositions = {
