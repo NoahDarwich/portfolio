@@ -1267,9 +1267,8 @@ body {
 }
 
 .timeline-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    max-height: none;
+    overflow: visible;
     margin-top: 12px;
 }
 
@@ -1280,26 +1279,16 @@ body {
     font-weight: 600;
 }
 
-.timeline-interactive.expanded .timeline-details {
-    max-height: 1000px;
-}
-
-.timeline-interactive.expanded .hover-indicator {
-    opacity: 0;
-    transform: translateY(-5px);
-}
-
-.timeline-interactive.expanded .timeline-summary {
+.timeline-interactive .hover-indicator {
     display: none;
 }
 
-.timeline-interactive.expanded {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.timeline-interactive .timeline-summary {
+    display: none;
 }
 
 .timeline-interactive {
-    cursor: pointer;
+    cursor: default;
 }
 
 .responsibilities-list {
@@ -1353,31 +1342,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.skills-stacked-bar {
-    display: flex;
-    height: 24px;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.skill-segment {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.skill-segment:hover {
-    filter: brightness(1.1);
-    transform: scaleY(1.15);
-    z-index: 1;
-}
+/* Removed: .skills-stacked-bar and .skill-segment styles (simplified to unified color design) */
 
 .skills-individual-bars {
     display: flex;
@@ -1399,13 +1364,13 @@ body {
 
 .skill-bar-name {
     font-size: 0.75rem;
-    color: #4a5568;
+    color: #2d3748;  /* Updated for better contrast */
     font-weight: 500;
 }
 
 .skill-bar-percentage {
     font-size: 0.7rem;
-    color: #667eea;
+    color: #2d3748;  /* Updated for consistency */
     font-weight: 600;
 }
 
@@ -1418,11 +1383,13 @@ body {
 
 .skill-bar-fill {
     height: 100%;
+    background: #667eea;  /* Unified brand color */
     border-radius: 4px;
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     width: 0;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .skill-bar-fill::after {
@@ -1446,13 +1413,7 @@ body {
     100% { transform: translateX(100%); }
 }
 
-/* Skill Category Colors */
-.skill-technical { background: #667eea; }
-.skill-management { background: #764ba2; }
-.skill-research { background: #4ecdc4; }
-.skill-communication { background: #f6ad55; }
-.skill-process { background: #48bb78; }
-.skill-domain { background: #ed64a6; }
+/* Removed: Skill Category Colors (simplified to unified #667eea in .skill-bar-fill) */
 
 /* Mobile Interactive Timeline */
 @media (max-width: 768px) {
@@ -1474,14 +1435,7 @@ body {
         padding: 12px;
     }
 
-    .skills-stacked-bar {
-        height: 20px;
-        margin-bottom: 12px;
-    }
-
-    .skill-segment {
-        font-size: 0.65rem;
-    }
+    /* Removed: Mobile responsive styles for .skills-stacked-bar and .skill-segment (no longer used) */
 
     .skill-bar-name {
         font-size: 0.7rem;

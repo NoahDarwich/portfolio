@@ -415,33 +415,23 @@ function initializeInteractiveTimeline() {
 
     interactiveItems.forEach(item => {
         const positionId = item.getAttribute('data-position-id');
-        let isAutoExpanded = false;
 
         // Populate details from cv-data.js if available
         if (typeof cvPositions !== 'undefined' && cvPositions[positionId]) {
             populateTimelineDetails(item, cvPositions[positionId]);
 
-            // Auto-expand if position has 2 or fewer responsibilities
-            const data = cvPositions[positionId];
-            if (data.responsibilities && data.responsibilities.length <= 2) {
-                item.classList.add('expanded');
-                isAutoExpanded = true;
-                // Hide the click indicator since it's already expanded
-                const indicator = item.querySelector('.hover-indicator');
-                if (indicator) {
-                    indicator.style.display = 'none';
-                }
-                // Remove cursor pointer for auto-expanded items
-                item.style.cursor = 'default';
-            }
-        }
+            // Always expand all items to show detailed descriptions
+            item.classList.add('expanded');
 
-        // Add click event to toggle expanded state (only for non-auto-expanded items)
-        item.addEventListener('click', function(e) {
-            if (!isAutoExpanded) {
-                this.classList.toggle('expanded');
+            // Hide the click indicator since details are always visible
+            const indicator = item.querySelector('.hover-indicator');
+            if (indicator) {
+                indicator.style.display = 'none';
             }
-        });
+
+            // Remove cursor pointer since items are not interactive
+            item.style.cursor = 'default';
+        }
     });
 }
 
@@ -467,28 +457,11 @@ function populateTimelineDetails(element, data) {
 }
 
 function populateSkillBreakdown(element, skills) {
-    const stackedBar = element.querySelector('.skills-stacked-bar');
     const individualBars = element.querySelector('.skills-individual-bars');
 
-    if (!stackedBar || !individualBars) return;
+    if (!individualBars) return;
 
-    // Create stacked bar segments
-    stackedBar.innerHTML = '';
-    skills.forEach(skill => {
-        const segment = document.createElement('div');
-        segment.className = `skill-segment skill-${skill.category}`;
-        segment.style.width = `${skill.percentage}%`;
-
-        // Only show label if segment is large enough
-        if (skill.percentage >= 15) {
-            segment.textContent = `${skill.percentage}%`;
-        }
-
-        segment.title = `${skill.name}: ${skill.percentage}%`;
-        stackedBar.appendChild(segment);
-    });
-
-    // Create individual skill bars
+    // Create individual skill bars with unified color
     individualBars.innerHTML = '';
     skills.forEach(skill => {
         const barItem = document.createElement('div');
@@ -500,7 +473,7 @@ function populateSkillBreakdown(element, skills) {
                 <span class="skill-bar-percentage">${skill.percentage}%</span>
             </div>
             <div class="skill-bar-track">
-                <div class="skill-bar-fill skill-${skill.category}" data-percentage="${skill.percentage}"></div>
+                <div class="skill-bar-fill" data-percentage="${skill.percentage}"></div>
             </div>
         `;
 
