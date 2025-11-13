@@ -43,44 +43,44 @@ Redesign the CV page (portfolio.html) to create a more engaging, modern user exp
 - Verify Experience tab has "active" class applied
 - No visible flash or layout shift during load
 
-### User Story 3 [P2] - Interactive Position Cards with Hover Details
+### User Story 3 [P2] - Interactive Position Cards with Always-Visible Details
 **As a** portfolio visitor
 **I want to** see detailed responsibilities and skill breakdowns for each position
-**So that** I can understand the full scope of work without overwhelming initial view
+**So that** I can understand the full scope of work immediately
 
 **Acceptance Criteria:**
-- Timeline cards show condensed view by default (title, dates, location)
-- Hover indicator displays: "Hover to see details & skill breakdown"
-- On hover: Card expands to show full responsibilities and skill visualization
-- Card lifts with shadow on hover (translateY(-5px))
-- Smooth transition animation (0.4s ease)
-- Mobile: Tap to toggle expanded state instead of hover
+- Timeline cards always display full responsibilities and skill visualizations
+- No hover or click required to view details
+- Detailed responsibilities shown in expanded view by default
+- Skill visualizations always visible
+- Hover indicators and summary bullets removed from HTML
 
 **Test Criteria:**
-- Hover over position card and verify expansion with details
-- Verify hover indicator disappears when expanded
-- Test mobile tap-to-expand functionality
-- Verify smooth animation transitions
+- Load portfolio page and verify all position details are immediately visible
+- Verify no click or hover required to see responsibilities
+- Verify skill breakdowns display for all positions
+- Verify no hover indicators present
 
 ### User Story 4 [P2] - Visual Skill Breakdown per Position
 **As a** portfolio visitor
 **I want to** see visual representation of skill distribution for each role
 **So that** I can quickly understand the technical composition of each position
 
-**Acceptance Criteria:**
-- Stacked horizontal bar shows skill composition at a glance
-- Each skill segment color-coded by category (Technical, Management, Research, Communication, Process, Domain)
-- On hover/expand: Individual skill bars with percentages displayed
+**Note**: This user story was updated in feature 002-skill-bar-simplify to use a simplified single-color approach instead of multi-colored categories.
+
+**Acceptance Criteria (Updated):**
+- Individual skill bars display with unified color (#667eea)
+- Each skill bar shows skill name and percentage clearly
 - Skill bars animate when scrolling into view
-- Shimmer animation on skill bar fills
-- Percentage labels clearly visible
-- Color palette consistent with brand gradient
+- Percentage labels clearly visible on all bars
+- No category-based color coding (simplified from original multi-color approach)
+- Stacked horizontal bar removed in favor of cleaner individual bar display
 
 **Test Criteria:**
-- Verify stacked bar displays in collapsed position card view
-- Expand card and verify individual skill bars display with percentages
-- Verify color coding matches category (6 distinct colors)
-- Test animation triggers when scrolling position into viewport
+- Verify individual skill bars display with unified color
+- Verify each bar shows skill name and percentage
+- Verify skill bars animate when scrolling into viewport
+- Verify percentage text is readable and properly contrasted
 
 ### User Story 5 [P1] - Merge Languages into Skills Section
 **As a** portfolio visitor

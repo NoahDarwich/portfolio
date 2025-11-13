@@ -15,10 +15,32 @@ This is a static portfolio website for Noah Darwich, an AI Research Expert. The 
 **Primary Pages:**
 - [index.html](index.html) - Homepage with hero section and capabilities overview
 - [portfolio.html](portfolio.html) - CV and professional experience
-- [research-tools.html](research-tools.html) - Showcase of research automation tools
+- [research-tools.html](research-tools.html) - **Solutions Page** - Showcase of LLM-powered research automation tool
 - [about.html](about.html) - Detailed about/services page
 - [contact.html](contact.html) - Contact form and information
 - [services.html](services.html) - Service offerings (legacy/alternative version)
+
+### Solutions Page (research-tools.html)
+
+The Solutions page showcases the LLM-powered research automation tool as a professional solution for academic institutions and researchers. Redesigned from "Projects" page to emphasize value proposition for potential clients.
+
+**Key Sections:**
+- **Hero**: Value proposition + CTA above fold (max-height: 950px ensures CTA visibility on 1920x1080 desktop)
+- **Benefits**: 6 benefit cards focused on researcher pain points (time savings, entity extraction, multi-source processing, reproducibility, data structuring, quality assurance)
+- **Primary CTA**: "Try the Tool Now" linking to https://noahdarwich.streamlit.app
+- **Secondary Projects**: PRO-TEST card for additional credibility
+
+**Design Notes:**
+- Hero headline emphasizes "Automate Research Data Collection with LLM Intelligence"
+- Stats bar highlights speed (10x Faster), quality (94% Accuracy), and capability (Multi-Source Processing)
+- Navigation uses "Solutions" terminology site-wide (updated across all 6 HTML files)
+- Stat numbers use gradient effect for prominence (styles.css:3253-3261)
+- Mobile: Hero max-height removed on mobile (CTA may be below fold - acceptable per specification)
+
+**Success Criteria:**
+- CTA must be visible without scrolling on 1920x1080 desktop
+- Visitors should understand tool purpose within 30 seconds
+- At least 4 benefit cards clearly describe researcher value propositions
 
 ## Development Commands
 
@@ -192,3 +214,10 @@ This is a static site requiring no build step. Simply upload all files to any st
 3. No build process means no minification (acceptable for small site)
 4. Some duplicate CSS for service cards due to multiple page versions
 5. Mobile menu animation could be smoother with transform instead of left property
+
+## Active Technologies
+- HTML5, CSS3, JavaScript ES6+ (no build process) (003-solutions-page-redesign)
+- N/A (static content, no backend) (003-solutions-page-redesign)
+
+## Recent Changes
+- 003-solutions-page-redesign: Added HTML5, CSS3, JavaScript ES6+ (no build process)
