@@ -380,6 +380,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Initialize interactive timeline after content is loaded
             if (tabName === 'experience') {
                 initializeInteractiveTimeline();
+                // Initialize timeline durations after timeline items are populated
+                setTimeout(() => {
+                    initTimelineDurations();
+                }, 100);
             }
         }, 200);
 
@@ -596,18 +600,5 @@ function initTimelineDurations() {
     });
 }
 
-// Initialize on DOM ready and set up tab switching
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize timeline durations on page load
-    initTimelineDurations();
-
-    // Re-initialize when CV tabs are switched
-    const cvNavLinks = document.querySelectorAll('.cv-nav-link[data-tab]');
-    cvNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            setTimeout(function() {
-                initTimelineDurations();
-            }, 250);
-        });
-    });
-});
+// Note: Duration initialization is handled automatically when the experience tab loads
+// See showTab() function in CV Tab Switching section above
