@@ -461,45 +461,38 @@ function populateSkillBreakdown(element, skills) {
 
     if (!individualBars) return;
 
-    // Create individual skill bars with unique colors per skill
-    individualBars.innerHTML = '';
+    // Create stacked horizontal bar with colored segments
+    const stackedBar = document.createElement('div');
+    stackedBar.className = 'skill-bar-stacked';
+
     skills.forEach(skill => {
-        const barItem = document.createElement('div');
-        barItem.className = 'skill-bar-item';
+        const segment = document.createElement('div');
+        segment.className = 'skill-segment';
 
         // Get unique color for this skill (default to brand color if not found)
         const skillColor = skillColors[skill.name] || '#667eea';
 
-        barItem.innerHTML = `
-            <div class="skill-bar-header">
-                <span class="skill-bar-name">${skill.name}</span>
-                <span class="skill-bar-percentage">${skill.percentage}%</span>
-            </div>
-            <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-percentage="${skill.percentage}" style="background: ${skillColor};"></div>
-            </div>
-        `;
+        // Set segment width based on percentage
+        segment.style.flexBasis = `${skill.percentage}%`;
+        segment.style.background = skillColor;
 
-        individualBars.appendChild(barItem);
+        // Label display rules based on segment size
+        let label = '';
+        if (skill.percentage >= 12) {
+            // Full label for segments >= 12%
+            label = `${skill.name} ${skill.percentage}%`;
+        } else if (skill.percentage >= 8) {
+            // Percentage only for segments 8-11%
+            label = `${skill.percentage}%`;
+        }
+        // No label for segments < 8% (just color visible)
+
+        segment.innerHTML = `<span>${label}</span>`;
+        stackedBar.appendChild(segment);
     });
 
-    // Animate skill bars when they come into view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const fills = entry.target.querySelectorAll('.skill-bar-fill');
-                fills.forEach(fill => {
-                    const percentage = fill.getAttribute('data-percentage');
-                    setTimeout(() => {
-                        fill.style.width = `${percentage}%`;
-                    }, 100);
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    observer.observe(element);
+    individualBars.innerHTML = '';
+    individualBars.appendChild(stackedBar);
 }
 
 // ============================================

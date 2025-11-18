@@ -1341,78 +1341,55 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Removed: .skills-stacked-bar and .skill-segment styles (simplified to unified color design) */
-
+/* Stacked Horizontal Skill Bar - Single bar with colored segments */
 .skills-individual-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-top: 16px;
 }
 
-.skill-bar-item {
+.skill-bar-stacked {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.skill-bar-header {
+.skill-segment {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.skill-bar-name {
-    font-size: 0.9rem;
-    color: #2d3748;  /* Updated for better contrast */
-    font-weight: 500;
-}
-
-.skill-bar-percentage {
-    font-size: 0.85rem;
-    color: #2d3748;  /* Updated for consistency */
-    font-weight: 600;
-}
-
-.skill-bar-track {
-    height: 12px;
-    background: #e2e8f0;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.skill-bar-fill {
-    height: 100%;
-    /* Background color applied inline via JavaScript based on skill name */
-    border-radius: 6px;
-    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 0;
+    justify-content: center;
+    padding: 0 8px;
+    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    border-right: 1px solid rgba(255,255,255,0.2);
 }
 
-.skill-bar-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
-    animation: shimmer 2s infinite;
+.skill-segment:last-child {
+    border-right: none;
+}
+
+.skill-segment:hover {
+    filter: brightness(1.1);
+    transform: scaleY(1.05);
+    z-index: 1;
+}
+
+.skill-segment span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
 @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
-
-/* Removed: Skill Category Colors (simplified to unified #667eea in .skill-bar-fill) */
 
 /* Mobile Interactive Timeline */
 @media (max-width: 768px) {
@@ -1434,18 +1411,13 @@ body {
         padding: 12px;
     }
 
-    /* Removed: Mobile responsive styles for .skills-stacked-bar and .skill-segment (no longer used) */
-
-    .skill-bar-name {
-        font-size: 0.85rem;
+    /* Mobile responsive styles for stacked skill bar */
+    .skill-bar-stacked {
+        height: 40px;
     }
 
-    .skill-bar-percentage {
-        font-size: 0.8rem;
-    }
-
-    .skill-bar-track {
-        height: 10px;
+    .skill-segment span {
+        font-size: 0.75rem;
     }
 }
 
