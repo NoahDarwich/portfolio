@@ -1412,8 +1412,18 @@ body {
         height: 40px;
     }
 
+    .skill-segment {
+        padding: 0 4px;
+    }
+
     .skill-segment span {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    /* Disable hover transform on mobile (touch devices) */
+    .skill-segment:hover {
+        transform: none;
+        filter: brightness(1.05);
     }
 }
 
