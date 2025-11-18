@@ -1160,18 +1160,16 @@ body {
 /* Position Block Interactive Layout */
 .position-block.timeline-interactive {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: flex-start;
 }
 
 .position-block.timeline-interactive .timeline-main {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
 }
 
 .position-block.timeline-interactive .timeline-skills {
-    width: 240px;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .timeline-duration-text {
@@ -1220,18 +1218,16 @@ body {
 
 .timeline-interactive .timeline-content {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .timeline-main {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
 }
 
 .timeline-skills {
-    width: 280px;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .timeline-summary {
