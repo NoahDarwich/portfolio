@@ -1436,17 +1436,30 @@ body {
         padding: 12px;
     }
 
-    /* Mobile responsive styles for stacked skill bar */
+    /* Simplified mobile skill display - vertical list instead of horizontal bar */
     .skill-bar-stacked {
-        height: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
     }
 
     .skill-segment {
-        padding: 0 4px;
+        width: 100%;
+        height: 36px;
+        border-radius: 6px;
+        padding: 0 12px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .skill-segment span {
-        font-size: 0.7rem;
+        font-size: 0.85rem;
+        text-align: left;
     }
 
     /* Disable hover transform on mobile (touch devices) */
@@ -2595,6 +2608,12 @@ body {
         height: 280px;
     }
 
+    .hero-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
     .hero-actions {
         justify-content: center;
     }
@@ -2667,6 +2686,89 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
+    /* CV Navigation - Mobile optimized 2x2 grid */
+    .cv-intro {
+        padding: 60px 0 40px;
+        padding-top: 132px;
+    }
+
+    .cv-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cv-nav-link {
+        padding: 16px 12px;
+        min-width: auto;
+        gap: 6px;
+    }
+
+    .cv-nav-link i {
+        font-size: 1.3rem;
+    }
+
+    .cv-nav-link span {
+        font-size: 0.85rem;
+    }
+
+    /* Ensure download button matches other buttons on mobile */
+    .cv-nav-download {
+        padding: 16px 12px !important;
+        min-width: auto !important;
+        width: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .cv-nav-download:hover {
+        transform: translateY(-3px) scale(1) !important;
+    }
+
+    .cv-nav-download i {
+        font-size: 1.3rem;
+    }
+
+    .cv-nav-download span {
+        font-size: 0.85rem;
+    }
+
+    .cv-intro-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Better icon sizing for mobile */
+    .capability-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .capability-icon i {
+        font-size: 1.8rem;
+    }
+
+    .capability-item {
+        text-align: center;
+        padding: var(--spacing-lg);
+    }
+
+    .capability-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .capability-item p {
+        font-size: 0.95rem;
+    }
     
     .about-highlights {
         grid-template-columns: 1fr;
@@ -2707,78 +2809,143 @@ body {
         width: 200px;
         height: 200px;
     }
-    
+
     .page-title {
         font-size: 2.5rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .impact-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .impact-number {
         font-size: 1.8rem;
     }
-    
+
     .impact-icon {
         font-size: 2.5rem;
     }
-    
+
     .portfolio-content h3 {
         font-size: 1.4rem;
     }
-    
+
     .result-metrics {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    
+
     .service-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 15px;
     }
-    
+
     .service-pricing {
         text-align: center;
     }
-    
+
     .expertise-areas {
         grid-template-columns: 1fr;
     }
-    
+
     .about-stats {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    
+
     .btn {
         width: 100%;
         max-width: 280px;
         padding: 12px 20px;
         font-size: 0.9rem;
     }
-    
+
+    /* Ensure hero image fills container properly */
     .hero-image {
-        width: 120px;
-        height: 120px;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
     }
-    
+
+    /* CV Navigation - Extra compact for small screens */
+    .cv-nav {
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .cv-nav-link {
+        padding: 14px 10px;
+        gap: 4px;
+    }
+
+    .cv-nav-link i {
+        font-size: 1.2rem;
+    }
+
+    .cv-nav-link span {
+        font-size: 0.8rem;
+    }
+
+    /* Ensure download button matches other buttons */
+    .cv-nav-download {
+        padding: 14px 10px !important;
+        min-width: auto !important;
+        width: auto;
+        box-sizing: border-box;
+        gap: 4px;
+    }
+
+    .cv-nav-download:hover {
+        transform: translateY(-3px) scale(1) !important;
+    }
+
+    .cv-nav-download i {
+        font-size: 1.2rem;
+    }
+
+    .cv-nav-download span {
+        font-size: 0.8rem;
+    }
+
+    .cv-intro-text {
+        font-size: 0.95rem;
+    }
+
+    /* Smaller icons for very small screens */
+    .capability-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .capability-icon i {
+        font-size: 1.5rem;
+    }
+
+    .capability-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .capability-item p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
     .contact-form {
         padding: 30px 20px;
     }
-    
+
     .footer-badges {
         flex-direction: column;
         gap: 10px;

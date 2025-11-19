@@ -406,6 +406,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Add click handler for download button
+    const downloadButton = document.querySelector('.cv-nav-download[data-download]');
+    if (downloadButton) {
+        downloadButton.addEventListener('click', function() {
+            const fileName = this.getAttribute('data-download');
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+
     // Auto-load Experience section on page load
     showTab('experience');
 });
@@ -484,10 +498,10 @@ function populateSkillBreakdown(element, skills) {
         let label = '';
         if (skill.percentage >= 12) {
             // Full label for segments >= 12%
-            label = `${skill.name} ${skill.percentage}%`;
+            label = `${skill.name}`;
         } else if (skill.percentage >= 8) {
-            // Percentage only for segments 8-11%
-            label = `${skill.percentage}%`;
+            // Skill name only for segments 8-11%
+            label = `${skill.name}`;
         }
         // No label for segments < 8% (just color visible)
 
