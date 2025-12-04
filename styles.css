@@ -791,119 +791,251 @@ body {
 
 /* Responsive CV Navigation */
 @media (max-width: 768px) {
+    /* CV Intro Section - Mobile Optimized */
+    .cv-intro {
+        padding: 60px 0 40px;
+        padding-top: 100px;
+    }
+
     .cv-profile-image {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         border: 3px solid white;
+        margin-bottom: 20px;
     }
 
     .cv-intro-text {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        padding: 0 10px;
     }
 
+    /* Mobile-First Navigation - Larger, More Prominent */
     .cv-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        grid-template-columns: 1fr;
+        gap: 16px;
         width: 100%;
+        margin-top: 30px;
     }
 
     .cv-nav-link {
-        padding: 18px 16px;
+        padding: 20px 24px;
         min-width: auto;
         width: 100%;
+        font-size: 1.1rem;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .cv-nav-link.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        transform: scale(1.02);
     }
 
     .cv-nav-download {
-        grid-column: 1 / -1;
+        grid-column: 1;
+        background: #f8fafc;
+        border: 2px solid #667eea;
     }
 
     .cv-nav-link i {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     .cv-nav-link span {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
+        font-weight: 600;
     }
 
-    /* Skills Grid Mobile */
+    /* Section Title Mobile */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    /* Skills Grid Mobile - Card-Based Layout */
     .skills-grid-enhanced {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+        padding: 0 10px;
     }
 
-    .skill-tag {
-        padding: 6px 12px;
-        font-size: 0.85rem;
-        word-wrap: break-word;
+    .skill-category {
+        background: white;
+        padding: 24px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        border: 2px solid #f1f5f9;
     }
 
     .skill-category h3,
     .skill-category-header {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+        color: #667eea;
+        font-weight: 700;
     }
 
-    /* Timeline Mobile Adjustments */
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skill-tag {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /* Timeline Mobile - Card-Based, No Complex Bars */
+    .timeline-list {
+        padding: 0 10px;
+    }
+
+    .timeline-item {
+        background: white;
+        padding: 24px;
+        border-radius: 15px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        border: 2px solid #f1f5f9;
+        position: relative;
+    }
+
+    /* Hide complex timeline visuals on mobile */
     .timeline-duration-bar {
-        opacity: 0.2;
-        width: 3px;
+        display: none;
+    }
+
+    .timeline-marker {
+        display: none;
+    }
+
+    .timeline-content {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        color: #2d3748;
+        font-weight: 700;
+        line-height: 1.4;
     }
 
     .timeline-meta {
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
+        gap: 8px;
+        margin-bottom: 16px;
     }
 
-    .timeline-date-badge,
+    .timeline-date-badge {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        font-weight: 600;
+        border: none;
+    }
+
     .timeline-location {
-        font-size: 0.85rem;
-        padding: 5px 10px;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        background: #f8fafc;
+        color: #4a5568;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
     }
 
     .timeline-duration-text {
-        font-size: 0.75rem;
-        margin-top: 4px;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 8px;
+        font-weight: 500;
     }
 
     .timeline-continuation {
-        font-size: 0.75rem;
-        margin-bottom: 4px;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        color: #64748b;
     }
 
-    /* Position Progression Mobile Adjustments */
+    /* Position Progression Mobile - Simplified Cards */
     .position-progression {
-        gap: 16px;
+        gap: 20px;
+        margin-top: 20px;
     }
 
     .position-block {
-        padding-left: 16px;
-        border-left-width: 2px;
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid #e2e8f0;
+        border-left: 4px solid #667eea;
+        margin-bottom: 0;
     }
 
     .position-block:hover {
-        padding-left: 16px;
+        padding: 20px;
+        border-left-width: 4px;
     }
 
     .position-title {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 8px;
+        line-height: 1.4;
     }
 
     .position-dates {
-        font-size: 0.8rem;
-        padding: 3px 8px;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        display: inline-block;
+        margin-bottom: 12px;
     }
 
-    /* Ensure readable text in timeline */
+    /* Readable text in timeline */
     .timeline-details,
     .timeline-content ul,
     .timeline-content li {
-        line-height: 1.6;
+        line-height: 1.7;
+        font-size: 0.95rem;
+        color: #4a5568;
     }
 
-    .position-block {
-        margin-bottom: 18px;
+    .timeline-content ul {
+        margin-top: 12px;
+        padding-left: 20px;
+    }
+
+    .timeline-content li {
+        margin-bottom: 10px;
+    }
+
+    .timeline-details h4 {
+        font-size: 1rem;
+        color: #667eea;
+        margin-bottom: 10px;
+        font-weight: 700;
     }
 
     /* Interactive timeline mobile adjustments */
@@ -915,25 +1047,50 @@ body {
         transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Disable hover effects on mobile */
+    /* Disable all hover effects on mobile */
     .timeline-item:hover {
         transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
     .timeline-item:hover .timeline-duration-bar {
-        opacity: 0.2;
-        box-shadow: none;
+        display: none;
     }
 
     .timeline-item:hover .timeline-marker {
-        transform: none;
-        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+        display: none;
     }
 
     .timeline-item:hover .timeline-date-badge,
     .timeline-item:hover .timeline-location {
-        background: rgba(102, 126, 234, 0.08);
-        border-color: rgba(102, 126, 234, 0.15);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    /* Skills breakdown in timeline */
+    .skills-breakdown-section {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 2px solid #e2e8f0;
+    }
+
+    .skills-breakdown-section h4 {
+        font-size: 1rem;
+        color: #667eea;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .skills-individual-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* CV Content Wrapper */
+    .cv-content-wrapper {
+        padding: 40px 0;
+        background: #f8fafc;
     }
 }
 
