@@ -866,14 +866,20 @@ body {
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 30px;
-        padding: 0 10px;
+        padding: 0;
+    }
+
+    /* Container padding for all sections */
+    .cv-content-wrapper .container {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     /* Skills Grid Mobile - Card-Based Layout */
     .skills-grid-enhanced {
         grid-template-columns: 1fr !important;
         gap: 24px !important;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .skill-category {
@@ -927,14 +933,17 @@ body {
 
     /* Timeline Mobile - Card-Based, No Complex Bars */
     .timeline-list {
-        padding: 0 10px;
+        padding: 0;
+        margin: 0;
     }
 
     .timeline-item {
         background: white;
-        padding: 24px;
+        padding: 20px;
         border-radius: 15px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         border: 2px solid #f1f5f9;
         position: relative;
@@ -1086,22 +1095,42 @@ body {
 
     /* Disable all hover effects on mobile */
     .timeline-item:hover {
-        transform: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transform: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
     }
 
     .timeline-item:hover .timeline-duration-bar {
-        display: none;
+        display: none !important;
     }
 
     .timeline-item:hover .timeline-marker {
-        display: none;
+        display: none !important;
     }
 
+    /* Keep date badge and location colors consistent on hover/click */
     .timeline-item:hover .timeline-date-badge,
-    .timeline-item:hover .timeline-location {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+    .timeline-item:active .timeline-date-badge,
+    .timeline-item.active .timeline-date-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .timeline-item:hover .timeline-location,
+    .timeline-item:active .timeline-location,
+    .timeline-item.active .timeline-location {
+        background: #f8fafc !important;
+        color: #4a5568 !important;
+        border: 1px solid #e2e8f0 !important;
+    }
+
+    /* Position blocks should not change date badge colors */
+    .position-block:hover .timeline-date-badge,
+    .position-block:active .timeline-date-badge,
+    .timeline-interactive:hover .timeline-date-badge,
+    .timeline-interactive:active .timeline-date-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
     }
 
     /* Skills breakdown in timeline */
