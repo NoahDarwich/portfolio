@@ -218,6 +218,7 @@ This is a static site requiring no build step. Simply upload all files to any st
 ## Active Technologies
 - HTML5, CSS3, JavaScript ES6+ (no build process) (003-solutions-page-redesign)
 - N/A (static content, no backend) (003-solutions-page-redesign)
+- HTML5, CSS3, JavaScript ES6+ (vanilla, no build process) + None (static site with CDN resources: Font Awesome 6.0.0, Google Fonts Inter) (001-mobile-ux-improvements)
 
 ## Recent Changes
 - 003-solutions-page-redesign: Added HTML5, CSS3, JavaScript ES6+ (no build process)
