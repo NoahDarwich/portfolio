@@ -221,4 +221,5 @@ This is a static site requiring no build step. Simply upload all files to any st
 - HTML5, CSS3, JavaScript ES6+ (vanilla, no build process) + None (static site with CDN resources: Font Awesome 6.0.0, Google Fonts Inter) (001-mobile-ux-improvements)
 
 ## Recent Changes
+- 001-mobile-ux-improvements: Optimized CV page mobile UX (single-column skills, 44px+ touch targets, 1.6 line-height, simplified timeline, tap feedback)
 - 003-solutions-page-redesign: Added HTML5, CSS3, JavaScript ES6+ (no build process)
