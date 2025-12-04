@@ -838,8 +838,9 @@ body {
         transform: scale(1.02);
     }
 
+    /* All buttons in 2x2 grid - no full width buttons */
     .cv-nav-link:first-child {
-        grid-column: 1 / -1;
+        grid-column: auto;
     }
 
     .cv-nav-download {
