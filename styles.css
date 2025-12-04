@@ -1059,22 +1059,31 @@ body {
 
     .timeline-content ul {
         margin-top: 12px;
-        padding-left: 24px !important;
+        padding-left: 0 !important;
         margin-left: 0 !important;
     }
 
     .timeline-content li {
         margin-bottom: 10px;
-        padding-left: 0 !important;
     }
 
     .responsibilities-list {
-        padding-left: 24px !important;
+        padding-left: 0 !important;
         margin-left: 0 !important;
     }
 
     .responsibilities-list li {
-        padding-left: 0 !important;
+        position: relative !important;
+        padding-left: 24px !important;
+        margin-bottom: 10px;
+    }
+
+    .responsibilities-list li:before {
+        content: "▸" !important;
+        position: absolute !important;
+        left: 4px !important;
+        color: #667eea !important;
+        font-weight: bold !important;
     }
 
     .timeline-details h4 {
