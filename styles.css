@@ -3943,6 +3943,11 @@ body {
     color: white;
 }
 
+.project-card-badge.live-application {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
 .project-card-title {
     font-size: 1.5rem;
     color: #2d3748;
@@ -4025,6 +4030,10 @@ body {
     color: #4a5568;
     line-height: 1.6;
     margin: 0;
+}
+
+.project-card-actions {
+    margin-top: 20px;
 }
 
 /* ===============================================

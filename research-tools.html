@@ -139,45 +139,51 @@
                 <!-- PRO-TEST Project Card -->
                 <div class="project-card">
                     <div class="project-card-header">
-                        <div class="project-card-badge proof-of-concept">
-                            <i class="fas fa-flask"></i>
-                            <span>Proof of Concept</span>
+                        <div class="project-card-badge live-application">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Application</span>
                         </div>
-                        <h3 class="project-card-title">PRO-TEST: Protest Violence Prediction</h3>
+                        <h3 class="project-card-title">PRO-TEST v2.0: Protest Outcome Prediction</h3>
                     </div>
 
                     <p class="project-card-description">
-                        A machine learning proof-of-concept developed to predict the likelihood of violence at protest demonstrations.
-                        This educational project demonstrates the application of supervised learning to social science research questions.
+                        A full-stack ML system that predicts likely security responses to protests in Iraq, Lebanon, and Egypt.
+                        Trained on 13,000+ historical protest events (2017–2022), the ensemble model forecasts outcomes including verbal coercion, detention, and physical force — served via a REST API with a live interactive frontend.
                     </p>
 
                     <div class="project-card-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-database"></i>
-                            <span>13,000+ protest event records</span>
+                            <span>13,000+ protest events (2017–2022)</span>
                         </div>
                         <div class="highlight-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>80% prediction accuracy</span>
+                            <i class="fas fa-layer-group"></i>
+                            <span>Ensemble model (RF + XGBoost + LightGBM)</span>
                         </div>
                         <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Le Wagon Bootcamp Capstone (2022)</span>
+                            <i class="fas fa-globe"></i>
+                            <span>Iraq, Lebanon &amp; Egypt coverage</span>
                         </div>
                     </div>
 
                     <div class="project-card-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Scikit-learn</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">XGBoost</span>
+                        <span class="tech-badge">LightGBM</span>
                         <span class="tech-badge">Random Forest</span>
-                        <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">Data Visualization</span>
-                        <span class="tech-badge">Streamlit</span>
+                        <span class="tech-badge">Redis</span>
                     </div>
 
                     <div class="project-card-note">
                         <i class="fas fa-info-circle"></i>
-                        <p>Educational project demonstrating technical proficiency in machine learning workflows, data preprocessing, model training, and deployment.</p>
+                        <p>Production system with 83-test CI/CD pipeline, Prometheus + Grafana monitoring, and separate backend API hosted on Render.</p>
+                    </div>
+
+                    <div class="project-card-actions">
+                        <a href="https://portest-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Project <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
