@@ -44,15 +44,38 @@ const skillColors = {
     'Lebanese History': '#9333ea',
     'Archival Research': '#7c3aed',
     'Ethnographic Methods': '#06b6d4',
-    'Automation': '#8b5cf6'
+    'Automation': '#8b5cf6',
+    'Voice AI': '#ef4444',
+    'Speech Pipelines': '#f43f5e',
+    'LLMs': '#8b5cf6',
+    'Production ML': '#0ea5e9',
+    'Multilingual ML': '#ec4899'
 };
 
 const cvPositions = {
+    'aethex-2026': {
+        title: 'ML Engineer',
+        organization: 'Aethex AI',
+        location: 'Remote',
+        dates: 'Apr 2026 – Present',
+        responsibilities: [
+            'Building voice AI agents for African and Arabic-speaking markets',
+            'Engineering the production voice pipeline — speech-to-text, LLM, and text-to-speech',
+            'Working alongside a team on agent quality, latency, and multilingual performance'
+        ],
+        skills: [
+            { name: 'Voice AI', percentage: 30, category: 'technical' },
+            { name: 'Speech Pipelines', percentage: 25, category: 'technical' },
+            { name: 'LLMs', percentage: 20, category: 'technical' },
+            { name: 'Multilingual ML', percentage: 15, category: 'technical' },
+            { name: 'Production ML', percentage: 10, category: 'technical' }
+        ]
+    },
     'freelance-yale-2025': {
         title: 'Yale University – Jordan Protest Events Project',
         organization: 'Freelance Research Data Scientist',
         location: 'Remote',
-        dates: 'Apr 2025 – Present',
+        dates: 'Apr 2025 – Mar 2026',
         responsibilities: [
             'Collaborating on Jordan protest event data project',
             'Designing and implementing custom AI-powered tool for automated event data collection'
@@ -67,7 +90,7 @@ const cvPositions = {
         title: 'Oxford University – Exploitation & Market Systems Research',
         organization: 'Freelance Research Data Scientist',
         location: 'Remote',
-        dates: 'Apr 2025 – Present',
+        dates: 'Apr 2025 – Mar 2026',
         responsibilities: [
             'Collaborating on a pilot conference to examine exploitation, coercion, and slavery in market systems and address data gaps',
             'Compiling and analyzing existing research to provide a comprehensive assessment of the current state of data in this field'
