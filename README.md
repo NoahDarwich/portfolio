@@ -34,7 +34,6 @@ portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript functionality
-├── cv.txt             # Your CV reference
 └── README.md          # This file
 ```
 
