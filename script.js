@@ -629,3 +629,8 @@ function initTimelineDurations() {
 
 // Note: Duration initialization is handled automatically when the experience tab loads
 // See showTab() function in CV Tab Switching section above
+
+// Keep footer copyright year current
+document.querySelectorAll('.current-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+});
