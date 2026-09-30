@@ -57,16 +57,26 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            entry.target.classList.remove('animate-pending');
             entry.target.classList.add('fade-in-up');
             observer.unobserve(entry.target); // Stop observing once animated
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Observe elements for animation. Content is visible by default; only elements
+// that start below the fold are hidden, so there's no flash for on-screen content
+// and nothing stays blank without JS or with reduced motion.
 document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const animateElements = document.querySelectorAll('.expertise-item, .service-card, .project-card, .stat-item, .contact-method');
-    animateElements.forEach(el => observer.observe(el));
+    animateElements.forEach(el => {
+        if (el.closest('.about-stats')) return; // CV stats stay static to avoid CLS
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        el.classList.add('animate-pending');
+        observer.observe(el);
+    });
 });
 
 // Chart animation on hero section

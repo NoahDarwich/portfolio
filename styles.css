@@ -3268,12 +3268,8 @@ body {
     }
 }
 
-/* Initial state for elements that will animate */
-.expertise-item,
-.service-card,
-.project-card,
-.stat-item:not(.about-stats .stat-item),
-.contact-method {
+/* Initial state for below-the-fold elements waiting to animate (set by script.js) */
+.animate-pending {
     opacity: 0;
 }
 
