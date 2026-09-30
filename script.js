@@ -464,6 +464,34 @@ function initializeInteractiveTimeline() {
             item.style.cursor = 'default';
         }
     });
+
+    initializeCollapsibleRoles();
+}
+
+// Older roles start collapsed (title + dates only) with a toggle to show details
+function initializeCollapsibleRoles() {
+    // Only the visible clone, not the hidden .cv-section-template it was copied from
+    document.querySelectorAll('.cv-section-active .timeline-collapsible').forEach(item => {
+        // Guard against adding a second toggle if setup runs again on the same clone
+        if (item.querySelector('.timeline-toggle')) return;
+
+        item.classList.add('collapsed');
+
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'timeline-toggle';
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = '<span>Show details</span> <i class="fas fa-chevron-down"></i>';
+
+        toggle.addEventListener('click', () => {
+            const collapsed = item.classList.toggle('collapsed');
+            toggle.setAttribute('aria-expanded', String(!collapsed));
+            toggle.querySelector('span').textContent = collapsed ? 'Show details' : 'Hide details';
+        });
+
+        const durationText = item.querySelector('.timeline-duration-text');
+        durationText.insertAdjacentElement('afterend', toggle);
+    });
 }
 
 function populateTimelineDetails(element, data) {

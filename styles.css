@@ -1455,6 +1455,41 @@ body {
     margin-top: 10px;
 }
 
+/* Collapsible older roles */
+.timeline-collapsible.collapsed .timeline-details,
+.timeline-collapsible.collapsed .timeline-skills {
+    display: none;
+}
+
+.timeline-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    margin-top: 4px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #667eea;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.timeline-toggle:hover {
+    color: #764ba2;
+}
+
+.timeline-toggle i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.timeline-toggle[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
 /* Position Block Interactive Layout */
 .position-block.timeline-interactive {
     display: flex;
