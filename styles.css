@@ -402,7 +402,7 @@ body {
 
 .capabilities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
     margin-top: var(--spacing-3xl);
 }
@@ -3856,6 +3856,10 @@ body {
     margin-top: 15px;
     font-size: 0.95rem;
     opacity: 0.85;
+}
+
+.project-hero-cta .cta-note {
+    color: #ffffff;
 }
 
 /* Project Tech Stack */

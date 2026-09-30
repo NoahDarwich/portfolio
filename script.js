@@ -96,6 +96,7 @@ if (heroSection) {
 }
 
 // Contact form handling
+const CONTACT_EMAIL = 'darwich.noah.95@gmail.com';
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -119,14 +120,26 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission (replace with actual form handling)
-        showNotification('Thank you! Your message has been sent. I\'ll get back to you soon.', 'success');
-        
-        // Reset form
-        this.reset();
-        
-        // In a real implementation, you would send the data to your server
-        // Example: sendFormData(formData);
+        // No backend: hand the message off to the visitor's email client via mailto
+        const inquirySelect = this.querySelector('#project-type');
+        const inquiry = inquirySelect && inquirySelect.value
+            ? inquirySelect.options[inquirySelect.selectedIndex].text
+            : 'General Inquiry';
+
+        const subject = `${inquiry} — from ${name}`;
+        const body = [
+            message,
+            '',
+            '---',
+            `Name: ${name}`,
+            `Email: ${email}`,
+            organization ? `Organization: ${organization}` : null
+        ].filter(line => line !== null).join('\n');
+
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Form is kept filled in, in case no email app opens and the visitor needs to copy it
+        showNotification(`Opening your email app… If nothing happens, email me directly at ${CONTACT_EMAIL}`, 'success');
     });
 }
 
