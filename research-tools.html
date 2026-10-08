@@ -23,163 +23,120 @@
     <meta name="author" content="Noah Darwich">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=16">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="logo-link">
-                    <span class="logo-text">ND</span>
-                </a>
-            </div>
+            <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                <span class="logo-mark">ND</span>
+                <span class="logo-name">Noah Darwich</span>
+            </a>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a href="research-tools.html" class="nav-link active">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link">CV</a></li>
+                <li class="nav-item"><a href="research-tools.html" class="nav-link active" aria-current="page">Solutions</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <main>
     <!-- Featured Project Hero -->
-    <section class="project-hero">
+    <section class="page-hero project-hero">
+        <div class="page-glow" aria-hidden="true"></div>
         <div class="container">
-            <div class="project-hero-content">
-                <div class="project-hero-badge">
-                    <i class="fas fa-star"></i>
-                    <span>Featured Project</span>
+            <div class="project-hero-badge"><i class="fas fa-star"></i><span>Featured Project</span></div>
+            <h1 class="project-hero-title">Automate Research Data Collection with LLM Intelligence</h1>
+            <p class="project-hero-description">
+                Transform months of manual data entry into hours. Extract entities, structure events,
+                and build quantitative datasets from qualitative sources — powered by LLMs and AI Agents,
+                and designed for researchers.
+            </p>
+            <div class="project-hero-cta">
+                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch <i class="fas fa-arrow-right"></i></a>
+                <p class="cta-note">Reach out to discuss your research needs</p>
+            </div>
+            <div class="project-tech-stack">
+                <h4>Technology Stack</h4>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">API Integration</span>
+                    <span class="tech-badge">MCP</span>
+                    <span class="tech-badge">Web Scraping</span>
+                    <span class="tech-badge">NLP</span>
                 </div>
-                <h1 class="project-hero-title">Automate Research Data Collection with LLM Intelligence</h1>
-                <p class="project-hero-description">
-                    Transform months of manual data entry into hours. Extract entities, structure events,
-                    and build quantitative datasets from qualitative sources— powered by LLMs and AI Agents,
-                    and designed for researchers.
-                </p>
+            </div>
+        </div>
+    </section>
 
-                <div class="project-hero-features">
-                    <h3>Why Researchers Choose This Solution</h3>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Dramatically Reduce Data Collection Time</h4>
-                                <p>Automate the manual work of extracting data from hundreds of documents. Focus on analysis, not data entry.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-tags"></i>
-                            <div>
-                                <h4>Automatic Entity Recognition</h4>
-                                <p>Define and extract custom attributes and variables from unstructured text sources using LLM-powered parsing for flexible data structuring.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-layer-group"></i>
-                            <div>
-                                <h4>Process Multiple Sources Simultaneously</h4>
-                                <p>Collect data from news articles, reports, academic databases, and policy documents in parallel.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <div>
-                                <h4>Maintain Research Standards</h4>
-                                <p>Full methodology transparency and reproducible workflows that meet academic research requirements.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-table"></i>
-                            <div>
-                                <h4>Structure Unstructured Data</h4>
-                                <p>Convert qualitative text into quantitative datasets ready for statistical analysis.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-clipboard-check"></i>
-                            <div>
-                                <h4>Validated Output Quality</h4>
-                                <p>Built-in quality checks and validation ensure data accuracy and consistency.</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Benefits -->
+    <section class="section project-hero-features">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Why Researchers Choose This Solution</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-clock"></i></span>
+                    <h4>Dramatically Reduce Data Collection Time</h4>
+                    <p>Automate the manual work of extracting data from hundreds of documents. Focus on analysis, not data entry.</p>
                 </div>
-
-                <div class="project-hero-cta">
-                    <a href="contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-envelope"></i>
-                        <span>Get in Touch</span>
-                    </a>
-                    <p class="cta-note">Reach out to discuss your research needs</p>
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-tags"></i></span>
+                    <h4>Automatic Entity Recognition</h4>
+                    <p>Define and extract custom attributes and variables from unstructured text sources using LLM-powered parsing for flexible data structuring.</p>
                 </div>
-
-                <div class="project-tech-stack">
-                    <h4>Technology Stack</h4>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">LLMs</span>
-                        <span class="tech-badge">API Integration</span>
-                        <span class="tech-badge">MCP</span>
-                        <span class="tech-badge">Web Scraping</span>
-                        <span class="tech-badge">NLP</span>
-                    </div>
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-layer-group"></i></span>
+                    <h4>Process Multiple Sources Simultaneously</h4>
+                    <p>Collect data from news articles, reports, academic databases, and policy documents in parallel.</p>
+                </div>
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-shield-alt"></i></span>
+                    <h4>Maintain Research Standards</h4>
+                    <p>Full methodology transparency and reproducible workflows that meet academic research requirements.</p>
+                </div>
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-table"></i></span>
+                    <h4>Structure Unstructured Data</h4>
+                    <p>Convert qualitative text into quantitative datasets ready for statistical analysis.</p>
+                </div>
+                <div class="feature-item spotlight">
+                    <span class="feature-icon"><i class="fas fa-clipboard-check"></i></span>
+                    <h4>Validated Output Quality</h4>
+                    <p>Built-in quality checks and validation ensure data accuracy and consistency.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Other Projects -->
-    <section class="other-projects-section">
+    <section class="section other-projects-section">
         <div class="container">
-            <h2 class="section-title">More Projects</h2>
+            <div class="section-head">
+                <h2 class="section-title">More Projects</h2>
+            </div>
 
-            <div class="projects-grid">
-                <!-- PRO-TEST Project Card -->
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <div class="project-card-badge live-application">
-                            <i class="fas fa-rocket"></i>
-                            <span>Live Application</span>
-                        </div>
-                        <h3 class="project-card-title">PRO-TEST v2.0: Protest Outcome Prediction</h3>
-                    </div>
-
+            <article class="project-card">
+                <div class="project-card-main">
+                    <div class="project-card-badge live-application"><i class="fas fa-circle"></i><span>Live Application</span></div>
+                    <h3 class="project-card-title">PRO-TEST v2.0: Protest Outcome Prediction</h3>
                     <p class="project-card-description">
                         A full-stack ML system that predicts likely security responses to protests in Iraq, Lebanon, and Egypt.
                         Trained on 13,000+ historical protest events, the ensemble model forecasts outcomes including verbal coercion, detention, and physical force — served via a REST API with a live interactive frontend.
                     </p>
-
-                    <div class="project-card-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-database"></i>
-                            <span>13,000+ protest events</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Ensemble model (RF + XGBoost + LightGBM)</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-globe"></i>
-                            <span>Iraq, Lebanon &amp; Egypt coverage</span>
-                        </div>
-                    </div>
-
                     <div class="project-card-tech">
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">FastAPI</span>
@@ -190,17 +147,22 @@
                         <span class="tech-badge">Random Forest</span>
                         <span class="tech-badge">Redis</span>
                     </div>
-
+                    <div class="project-card-actions">
+                        <a href="https://portest-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visit Web App <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="project-card-side">
+                    <div class="project-card-highlights">
+                        <div class="highlight-item"><i class="fas fa-database"></i><span>13,000+ protest events</span></div>
+                        <div class="highlight-item"><i class="fas fa-layer-group"></i><span>Ensemble model (RF + XGBoost + LightGBM)</span></div>
+                        <div class="highlight-item"><i class="fas fa-globe"></i><span>Iraq, Lebanon &amp; Egypt coverage</span></div>
+                    </div>
                     <div class="project-card-note">
                         <i class="fas fa-info-circle"></i>
                         <p>Production system with 83-test CI/CD pipeline, Prometheus + Grafana monitoring, and separate backend API hosted on Render.</p>
                     </div>
-
-                    <div class="project-card-actions">
-                        <a href="https://portest-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visit Web App <i class="fas fa-external-link-alt"></i></a>
-                    </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -211,26 +173,26 @@
                 <h2>Interested in Research Collaboration?</h2>
                 <p>Please feel free to get in touch to discuss potential opportunities or view my work in detail.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="contact.html" class="btn btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
                     <a href="portfolio.html" class="btn btn-outline">View My CV</a>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Noah Darwich</h4>
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                        <span class="logo-mark">ND</span>
+                        <span class="logo-name">Noah Darwich</span>
+                    </a>
                     <p>ML Engineer &amp; Research Data Scientist</p>
-                    <div class="footer-cta">
-                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                        <p>Let's talk</p>
-                    </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -239,28 +201,29 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/noah-darwich" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/NoahDarwich" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="contact-quick">
-                        <p><strong>Contact:</strong></p>
-                        <p>+49 178 515 55 35</p>
-                        <p>darwich.noah.95@gmail.com</p>
-                    </div>
+                    <ul>
+                        <li><a href="https://linkedin.com/in/noah-darwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/NoahDarwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a></li>
+                        <li><a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i>Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+491785155535">+49 178 515 55 35</a></li>
+                        <li><p>Essen, Germany</p></li>
+                        <li><p>Remote available</p></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
-                </div>
+                <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>

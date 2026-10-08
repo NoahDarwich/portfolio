@@ -18,8 +18,9 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        const open = navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', String(open));
     });
 
     // Close mobile menu when clicking on a link
@@ -70,7 +71,7 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const animateElements = document.querySelectorAll('.expertise-item, .service-card, .project-card, .stat-item, .contact-method');
+    const animateElements = document.querySelectorAll('.expertise-item, .service-card, .project-card, .stat-item, .contact-method, .capabilities-grid, .features-grid, .work-card');
     animateElements.forEach(el => {
         if (el.closest('.about-stats')) return; // CV stats stay static to avoid CLS
         if (el.getBoundingClientRect().top < window.innerHeight) return;
@@ -177,28 +178,12 @@ function showNotification(message, type = 'info') {
         </div>
     `;
     
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
-        color: white;
-        padding: 15px 20px;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        z-index: 10000;
-        max-width: 400px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    `;
-    
     // Add to page
     document.body.appendChild(notification);
     
     // Animate in
     setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
+        notification.classList.add('show');
     }, 100);
     
     // Auto remove after 5 seconds
@@ -214,7 +199,7 @@ function showNotification(message, type = 'info') {
 }
 
 function removeNotification(notification) {
-    notification.style.transform = 'translateX(100%)';
+    notification.classList.remove('show');
     setTimeout(() => {
         if (notification.parentNode) {
             notification.parentNode.removeChild(notification);
@@ -264,56 +249,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Add CSS for notifications
-const notificationStyles = document.createElement('style');
-notificationStyles.textContent = `
-    .notification-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-    }
-    
-    .notification-close {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-        padding: 0;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-    }
-    
-    .notification-close:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    
-    .notification-message {
-        flex: 1;
-        line-height: 1.4;
-    }
-`;
-
-document.head.appendChild(notificationStyles);
 
 // Apply throttling to scroll events
 window.addEventListener('scroll', throttle(() => {
     // Navbar background change
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 24);
     }
 }, 100));
 
@@ -412,13 +354,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update active state on buttons
         cvNavLinks.forEach(link => {
-            link.classList.remove('active');
+            const isActive = link.getAttribute('data-tab') === tabName;
+            link.classList.toggle('active', isActive);
+            link.setAttribute('aria-pressed', String(isActive));
         });
-
-        const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
     }
 
     // Add click handlers to all tab buttons
@@ -499,8 +438,8 @@ function initializeCollapsibleRoles() {
             toggle.querySelector('span').textContent = collapsed ? 'Show details' : 'Hide details';
         });
 
-        const durationText = item.querySelector('.timeline-duration-text');
-        durationText.insertAdjacentElement('afterend', toggle);
+        // At the end of the card, so it sits below any roles listed under the employer
+        item.querySelector('.timeline-content').appendChild(toggle);
     });
 }
 
@@ -526,42 +465,23 @@ function populateTimelineDetails(element, data) {
 }
 
 function populateSkillBreakdown(element, skills) {
-    const individualBars = element.querySelector('.skills-individual-bars');
+    const container = element.querySelector('.skills-individual-bars');
 
-    if (!individualBars) return;
+    if (!container) return;
 
-    // Create stacked horizontal bar with colored segments
-    const stackedBar = document.createElement('div');
-    stackedBar.className = 'skill-bar-stacked';
+    // Plain tags: the percentages in cv-data.js would read as proficiency levels
+    const tags = document.createElement('div');
+    tags.className = 'skill-tags';
 
     skills.forEach(skill => {
-        const segment = document.createElement('div');
-        segment.className = 'skill-segment';
-
-        // Get unique color for this skill (default to brand color if not found)
-        const skillColor = skillColors[skill.name] || '#667eea';
-
-        // Set segment width based on percentage
-        segment.style.flexBasis = `${skill.percentage}%`;
-        segment.style.background = skillColor;
-
-        // Label display rules based on segment size
-        let label = '';
-        if (skill.percentage >= 12) {
-            // Full label for segments >= 12%
-            label = `${skill.name}`;
-        } else if (skill.percentage >= 8) {
-            // Skill name only for segments 8-11%
-            label = `${skill.name}`;
-        }
-        // No label for segments < 8% (just color visible)
-
-        segment.innerHTML = `<span>${label}</span>`;
-        stackedBar.appendChild(segment);
+        const tag = document.createElement('span');
+        tag.className = 'skill-tag';
+        tag.textContent = skill.name;
+        tags.appendChild(tag);
     });
 
-    individualBars.innerHTML = '';
-    individualBars.appendChild(stackedBar);
+    container.innerHTML = '';
+    container.appendChild(tags);
 }
 
 // ============================================
@@ -628,7 +548,7 @@ function calculateDuration(startStr, endStr) {
     const start = parseDate(startStr);
     const end = endStr.toLowerCase() === 'present' ? new Date() : parseDate(endStr);
 
-    const months = monthDiff(start, end);
+    const months = monthDiff(start, end) + 1;
 
     return {
         months: months,
@@ -667,6 +587,17 @@ function initTimelineDurations() {
 
 // Note: Duration initialization is handled automatically when the experience tab loads
 // See showTab() function in CV Tab Switching section above
+
+// Cursor-following glow on .spotlight cards
+if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.spotlight').forEach(card => {
+        card.addEventListener('pointermove', e => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+        });
+    });
+}
 
 // Keep footer copyright year current
 document.querySelectorAll('.current-year').forEach(el => {

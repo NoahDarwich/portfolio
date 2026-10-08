@@ -23,69 +23,53 @@
     <meta name="author" content="Noah Darwich">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=4">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=16">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="logo-link">
-                    <span class="logo-text">ND</span>
-                </a>
-            </div>
+            <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                <span class="logo-mark">ND</span>
+                <span class="logo-name">Noah Darwich</span>
+            </a>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link active">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a href="research-tools.html" class="nav-link">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link active" aria-current="page">CV</a></li>
+                <li class="nav-item"><a href="research-tools.html" class="nav-link">Solutions</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <main>
     <!-- CV Introduction -->
-    <section class="cv-intro">
+    <section class="page-hero cv-intro">
+        <div class="page-glow" aria-hidden="true"></div>
         <div class="container">
-            <div class="cv-header">
-                <p class="cv-intro-text">
-                    I'm an ML Engineer at Aethex AI, where I work on the voice pipeline — STT, LLM, TTS — for voice agents serving African and Arabic-speaking markets. I came to this from six years of research data science: building and auditing multilingual datasets, and shipping Python/LLM tools for academic teams at Yale, Oxford, Georgetown, Princeton, and the Rockwool Foundation. Native Arabic and a research-grade bar for data quality are the threads connecting both halves.
-                </p>
-            </div>
+            <h1 class="page-title">My CV</h1>
+            <p class="cv-intro-text">
+                I'm an ML Engineer at Aethex AI, where I work on the voice pipeline — STT, LLM, TTS — for voice agents serving African and Arabic-speaking markets. I came to this from six years of research data science: building and auditing multilingual datasets, and shipping Python/LLM tools for academic teams at Yale, Oxford, Georgetown, Princeton, and the Rockwool Foundation. Native Arabic and a research-grade bar for data quality are the threads connecting both halves.
+            </p>
 
-            <!-- Section Navigation -->
-            <nav class="cv-nav">
-                <button class="cv-nav-link active" data-tab="experience">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Experience</span>
-                </button>
-                <button class="cv-nav-link" data-tab="skills">
-                    <i class="fas fa-code"></i>
-                    <span>Skills</span>
-                </button>
-                <button class="cv-nav-link" data-tab="education">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Education</span>
-                </button>
-                <button class="cv-nav-link cv-nav-download" data-download="Noah_Darwich_CV_ML_Engineer.pdf">
-                    <i class="fas fa-download"></i>
-                    <span>Download</span>
-                </button>
-            </nav>
+            <div class="cv-toolbar">
+                <!-- Section Navigation -->
+                <div class="cv-nav" aria-label="CV sections">
+                    <button class="cv-nav-link active" data-tab="experience"><i class="fas fa-briefcase"></i><span>Experience</span></button>
+                    <button class="cv-nav-link" data-tab="skills"><i class="fas fa-code"></i><span>Skills</span></button>
+                    <button class="cv-nav-link" data-tab="education"><i class="fas fa-graduation-cap"></i><span>Education</span></button>
+                </div>
+                <a href="Noah_Darwich_CV_ML_Engineer.pdf" download class="btn btn-secondary"><i class="fas fa-arrow-down"></i> Download CV (PDF)</a>
+            </div>
         </div>
     </section>
 
@@ -95,6 +79,7 @@
             <div id="cv-content" class="cv-content"></div>
         </div>
     </div>
+    </main>
 
     <!-- Timeline Section (Hidden Template) -->
     <section id="experience" class="timeline cv-section-template" data-section="experience" style="display: none;">
@@ -518,16 +503,22 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Noah Darwich</h4>
-                    <p>ML Engineer &amp; Research Data Scientist</p>
-                    <div class="footer-cta">
-                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                        <p>Let's talk</p>
-                    </div>
+            <div class="footer-cta-block">
+                <h2 class="footer-headline">Let's talk.</h2>
+                <div class="footer-cta-actions">
+                    <a href="mailto:darwich.noah.95@gmail.com" class="footer-email">darwich.noah.95@gmail.com <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-secondary">Send a message</a>
                 </div>
-                <div class="footer-section">
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                        <span class="logo-mark">ND</span>
+                        <span class="logo-name">Noah Darwich</span>
+                    </a>
+                    <p>ML Engineer &amp; Research Data Scientist</p>
+                </div>
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -536,29 +527,30 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/noah-darwich" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/NoahDarwich" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="contact-quick">
-                        <p><strong>Contact:</strong></p>
-                        <p>+49 178 515 55 35</p>
-                        <p>darwich.noah.95@gmail.com</p>
-                    </div>
+                    <ul>
+                        <li><a href="https://linkedin.com/in/noah-darwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/NoahDarwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a></li>
+                        <li><a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i>Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+491785155535">+49 178 515 55 35</a></li>
+                        <li><p>Essen, Germany</p></li>
+                        <li><p>Remote available</p></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
-                </div>
+                <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="cv-data.js"></script>
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>

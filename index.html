@@ -23,164 +23,169 @@
     <meta name="author" content="Noah Darwich">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=16">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="logo-link">
-                    <span class="logo-text">ND</span>
-                </a>
-            </div>
+            <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                <span class="logo-mark">ND</span>
+                <span class="logo-name">Noah Darwich</span>
+            </a>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a href="research-tools.html" class="nav-link">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link">CV</a></li>
+                <li class="nav-item"><a href="research-tools.html" class="nav-link">Solutions</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-container">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
             <div class="hero-content">
-                <div class="hero-intro">
-                    <h2 class="hero-greeting">Hello, I'm</h2>
-                    <h1 class="hero-name">Noah Darwich</h1>
-                    <h3 class="hero-title">ML Engineer &amp; Research Data Scientist</h3>
-                    <p class="hero-subtitle">
-                        I'm an ML Engineer working on the voice pipeline — STT, LLM, TTS — for voice agents in African and Arabic-speaking markets. Before that, six years of research data science: building multilingual datasets and shipping LLM tools for academic teams at Yale, Oxford, Georgetown, Princeton, and the Rockwool Foundation.
-                    </p>
-                </div>
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Noah Darwich</h1>
+                <p class="hero-title">ML Engineer &amp; Research Data Scientist</p>
+                <p class="hero-subtitle">
+                    I'm an ML Engineer working on the voice pipeline — STT, LLM, TTS — for voice agents in African and Arabic-speaking markets. Before that, six years of research data science: building multilingual datasets and shipping LLM tools for academic teams at Yale, Oxford, Georgetown, Princeton, and the Rockwool Foundation.
+                </p>
                 <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="contact.html" class="btn btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
                     <a href="portfolio.html" class="btn btn-secondary">View My CV</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <img src="profile1.jpg" alt="Noah Darwich - ML Engineer &amp; Research Data Scientist" class="hero-image" width="300" height="300" loading="eager">
+            <figure class="hero-visual">
+                <div class="portrait">
+                    <img src="profile1.jpg" alt="Noah Darwich - ML Engineer &amp; Research Data Scientist" class="hero-image" width="800" height="879" loading="eager" fetchpriority="high">
                 </div>
+            </figure>
+        </div>
+    </section>
+
+
+    <!-- What I Do Section -->
+    <section class="section capabilities">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">What I Do</h2>
+            </div>
+            <div class="capabilities-grid">
+                <article class="capability-item spotlight">
+                    <div class="capability-top"><span class="capability-icon"><i class="fas fa-microphone-lines"></i></span></div>
+                    <h3>Voice AI Pipelines</h3>
+                    <p>Building production voice agents end-to-end: speech-to-text, LLM reasoning, and text-to-speech. I focus on the details that decide whether users stay, such as latency, conversation quality, and multilingual performance.</p>
+                </article>
+                <article class="capability-item spotlight">
+                    <div class="capability-top"><span class="capability-icon"><i class="fas fa-language"></i></span></div>
+                    <h3>Multilingual &amp; Arabic NLP</h3>
+                    <p>Native Arabic speaker working on models and data for African and Arabic-speaking markets. Six years of building and auditing multilingual datasets means I know where language models break, and how to measure it.</p>
+                </article>
+                <article class="capability-item spotlight">
+                    <div class="capability-top"><span class="capability-icon"><i class="fas fa-diagram-project"></i></span></div>
+                    <h3>ML Systems &amp; Data Engineering</h3>
+                    <p>From raw, messy data to deployed models: dataset construction, quality control, LLM-powered extraction tools, and full-stack ML services like PRO-TEST, an ensemble model with a REST API, CI/CD, and monitoring.</p>
+                </article>
+                <article class="capability-item spotlight">
+                    <div class="capability-top"><span class="capability-icon"><i class="fas fa-robot"></i></span></div>
+                    <h3>AI/LLM-Powered Research Automation</h3>
+                    <p>Develop custom, Python-based AI and computational tools to automate and streamline multi-step academic research workflows. This process includes leveraging Large Language Models (LLM) and APIs to efficiently extract, categorize, and structure complex variables, significantly reducing manual effort in coding and data preparation.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- What I Do Section -->
-    <section class="capabilities">
+    <!-- Selected Work -->
+    <section class="section work">
         <div class="container">
-            <h2 class="section-title">What I Do</h2>
-            <div class="capabilities-grid">
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-microphone-lines"></i>
-                    </div>
-                    <h3>Voice AI Pipelines</h3>
-                    <p>Building production voice agents end-to-end: speech-to-text, LLM reasoning, and text-to-speech. I focus on the details that decide whether users stay, such as latency, conversation quality, and multilingual performance.</p>
+            <div class="section-head section-head--split">
+                <div class="section-head">
+                    <h2 class="section-title">Things I've built</h2>
                 </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-language"></i>
+                <a href="research-tools.html" class="text-link">All solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="work-grid">
+                <a href="research-tools.html" class="work-card work-card--featured spotlight">
+                    <div class="work-card-art" aria-hidden="true"></div>
+                    <div class="work-card-meta"><span>Featured Project</span><span class="work-card-arrow"><i class="fas fa-arrow-right"></i></span></div>
+                    <div>
+                        <h3>Automate Research Data Collection with LLM Intelligence</h3>
+                        <p>Extract entities, structure events, and build quantitative datasets from qualitative sources — designed for researchers.</p>
                     </div>
-                    <h3>Multilingual &amp; Arabic NLP</h3>
-                    <p>Native Arabic speaker working on models and data for African and Arabic-speaking markets. Six years of building and auditing multilingual datasets means I know where language models break, and how to measure it.</p>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-diagram-project"></i>
+                </a>
+                <a href="https://portest-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-card work-card--alt spotlight">
+                    <div class="work-card-art" aria-hidden="true"></div>
+                    <div class="work-card-meta"><span>Live Application</span><span class="work-card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span></div>
+                    <div>
+                        <h3>PRO-TEST v2.0: Protest Outcome Prediction</h3>
+                        <p>Ensemble model trained on 13,000+ protest events, served via a REST API with a live frontend.</p>
                     </div>
-                    <h3>ML Systems &amp; Data Engineering</h3>
-                    <p>From raw, messy data to deployed models: dataset construction, quality control, LLM-powered extraction tools, and full-stack ML services like PRO-TEST, an ensemble model with a REST API, CI/CD, and monitoring.</p>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI/LLM-Powered Research Automation</h3>
-                    <p>Develop custom, Python-based AI and computational tools to automate and streamline multi-step academic research workflows. This process includes leveraging Large Language Models (LLM) and APIs to efficiently extract, categorize, and structure complex variables, significantly reducing manual effort in coding and data preparation.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Research Collaborations -->
-    <section class="collaborations-section">
+    <section class="section collaborations-section">
         <div class="container">
-            <h2 class="section-title">Institutions I've worked with</h2>
+            <div class="section-head section-head--center">
+                <h2 class="section-title">Institutions I've worked with</h2>
+            </div>
         </div>
         <div class="logo-marquee">
             <div class="logo-marquee-track">
-                <div class="logo-slide">
-                    <img src="logos/627970eb53c8a73e766a78f4.png" alt="Yale University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/5842f8b6a6515b1e0ad75b2c.png" alt="Oxford University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/3u-georgetown-university-logo-600x200-1.png" alt="Georgetown University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/6279702453c8a73e766a78ef.png" alt="Princeton University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/Screenshot 2025-11-03 144623.png" alt="Rockwool Foundation" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/3bc987546bc6d78d6cc69cbc96423082.png" alt="Le Wagon" class="marquee-logo">
-                </div>
+                <div class="logo-slide"><img src="logos/color/aethex.svg" alt="Aethex AI" class="marquee-logo" width="181" height="34" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/yale.png" alt="Yale University" class="marquee-logo" width="190" height="46" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/oxford.png" alt="Oxford University" class="marquee-logo" width="176" height="50" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/georgetown.png" alt="Georgetown University" class="marquee-logo" width="175" height="52" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/princeton.png" alt="Princeton University" class="marquee-logo" width="88" height="73" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/rockwool.png" alt="Rockwool Foundation" class="marquee-logo" width="223" height="39" loading="lazy"></div>
+                <div class="logo-slide"><img src="logos/color/le-wagon.png" alt="Le Wagon" class="marquee-logo" width="162" height="55" loading="lazy"></div>
                 <!-- Duplicate set for seamless loop -->
-                <div class="logo-slide">
-                    <img src="logos/627970eb53c8a73e766a78f4.png" alt="Yale University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/5842f8b6a6515b1e0ad75b2c.png" alt="Oxford University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/3u-georgetown-university-logo-600x200-1.png" alt="Georgetown University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/6279702453c8a73e766a78ef.png" alt="Princeton University" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/Screenshot 2025-11-03 144623.png" alt="Rockwool Foundation" class="marquee-logo">
-                </div>
-                <div class="logo-slide">
-                    <img src="logos/3bc987546bc6d78d6cc69cbc96423082.png" alt="Le Wagon" class="marquee-logo">
-                </div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/aethex.svg" alt="" class="marquee-logo" width="181" height="34" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/yale.png" alt="" class="marquee-logo" width="190" height="46" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/oxford.png" alt="" class="marquee-logo" width="176" height="50" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/georgetown.png" alt="" class="marquee-logo" width="175" height="52" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/princeton.png" alt="" class="marquee-logo" width="88" height="73" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/rockwool.png" alt="" class="marquee-logo" width="223" height="39" loading="lazy"></div>
+                <div class="logo-slide" aria-hidden="true"><img src="logos/color/le-wagon.png" alt="" class="marquee-logo" width="162" height="55" loading="lazy"></div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Noah Darwich</h4>
-                    <p>ML Engineer &amp; Research Data Scientist</p>
-                    <div class="footer-cta">
-                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                        <p>Let's talk</p>
-                    </div>
+            <div class="footer-cta-block">
+                <h2 class="footer-headline">Let's talk.</h2>
+                <div class="footer-cta-actions">
+                    <a href="mailto:darwich.noah.95@gmail.com" class="footer-email">darwich.noah.95@gmail.com <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-secondary">Send a message</a>
                 </div>
-                <div class="footer-section">
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="nav-logo" aria-label="Noah Darwich, home">
+                        <span class="logo-mark">ND</span>
+                        <span class="logo-name">Noah Darwich</span>
+                    </a>
+                    <p>ML Engineer &amp; Research Data Scientist</p>
+                </div>
+                <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -189,28 +194,29 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/noah-darwich" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/NoahDarwich" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="contact-quick">
-                        <p><strong>Contact:</strong></p>
-                        <p>+49 178 515 55 35</p>
-                        <p>darwich.noah.95@gmail.com</p>
-                    </div>
+                    <ul>
+                        <li><a href="https://linkedin.com/in/noah-darwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/NoahDarwich" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a></li>
+                        <li><a href="mailto:darwich.noah.95@gmail.com"><i class="fas fa-envelope"></i>Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+491785155535">+49 178 515 55 35</a></li>
+                        <li><p>Essen, Germany</p></li>
+                        <li><p>Remote available</p></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
-                </div>
+                <p>&copy; <span class="current-year">2026</span> Noah Darwich. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>
