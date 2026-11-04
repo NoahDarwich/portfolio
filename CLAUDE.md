@@ -16,9 +16,7 @@ This is a static portfolio website for Noah Darwich, an AI Research Expert. The 
 - [index.html](index.html) - Homepage with hero section and capabilities overview
 - [portfolio.html](portfolio.html) - CV and professional experience
 - [research-tools.html](research-tools.html) - **Solutions Page** - Showcase of LLM-powered research automation tool
-- [about.html](about.html) - Detailed about/services page
 - [contact.html](contact.html) - Contact form and information
-- [services.html](services.html) - Service offerings (legacy/alternative version)
 
 ### Solutions Page (research-tools.html)
 
@@ -33,7 +31,7 @@ The Solutions page showcases the LLM-powered research automation tool as a profe
 **Design Notes:**
 - Hero headline emphasizes "Automate Research Data Collection with LLM Intelligence"
 - Stats bar highlights speed (10x Faster), quality (94% Accuracy), and capability (Multi-Source Processing)
-- Navigation uses "Solutions" terminology site-wide (updated across all 6 HTML files)
+- Navigation uses "Solutions" terminology site-wide (updated across all HTML files)
 - Stat numbers use gradient effect for prominence (styles.css:3253-3261)
 - Mobile: Hero max-height removed on mobile (CTA may be below fold - acceptable per specification)
 

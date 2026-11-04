@@ -57,11 +57,11 @@ const cvPositions = {
         title: 'ML Engineer',
         organization: 'Aethex AI',
         location: 'Remote',
-        dates: 'Apr 2026 – Present',
+        dates: 'Apr 2026 – Oct 2026',
         responsibilities: [
-            'Building voice AI agents for African and Arabic-speaking markets',
-            'Engineering the production voice pipeline — speech-to-text, LLM, and text-to-speech',
-            'Working alongside a team on agent quality, latency, and multilingual performance'
+            'Built voice AI agents for African and Arabic-speaking markets',
+            'Engineered the production voice pipeline — speech-to-text, LLM, and text-to-speech',
+            'Worked with the team on agent quality, latency, and multilingual performance'
         ],
         skills: [
             { name: 'Voice AI', percentage: 30, category: 'technical' },
