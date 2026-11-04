@@ -75,7 +75,7 @@ const cvPositions = {
         title: 'Yale University – Jordan Protest Events Project',
         organization: 'Freelance Research Data Scientist',
         location: 'Remote',
-        dates: 'Apr 2025 – Mar 2026',
+        dates: 'Apr 2025',
         responsibilities: [
             'Collaborating on Jordan protest event data project',
             'Designing and implementing custom AI-powered tool for automated event data collection'
@@ -90,7 +90,7 @@ const cvPositions = {
         title: 'Oxford University – Exploitation & Market Systems Research',
         organization: 'Freelance Research Data Scientist',
         location: 'Remote',
-        dates: 'Apr 2025 – Mar 2026',
+        dates: 'Apr 2025',
         responsibilities: [
             'Collaborating on a pilot conference to examine exploitation, coercion, and slavery in market systems and address data gaps',
             'Compiling and analyzing existing research to provide a comprehensive assessment of the current state of data in this field'
